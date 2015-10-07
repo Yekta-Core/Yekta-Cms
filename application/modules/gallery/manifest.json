@@ -1,0 +1,9 @@
+{
+    "name": "Gallery",
+    "description": "کاربران میتوانند تصاویر خود را آپلود کنند",
+    "author": {
+        "name": "Yekta-Core",
+        "website": "http://www.yekta-core.ir"
+    },
+    "enabled": true
+}

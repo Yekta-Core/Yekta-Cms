@@ -1,0 +1,60 @@
+{
+	"description": "فقط مدیران میتوانند بروزرسانی ها را ارسال نمایند",
+	"author": {
+		"name": "Yekta-CMS",
+		"website": "http://www.yekta-core.ir"
+	},
+
+	"permissions": {
+		"view": { "default": true, "description": "نمایش تغیرات ایجاد شده" },
+		"canAddCategory": { "default": false, "description": "اضافه کردن یک تغییر" },
+		"canAddChange": { "default": false, "description": "اضافه کردن یک دسته بندی" },
+		"canRemoveChange": { "default": false, "description": "حذف یک تغییر" },
+		"canRemoveCategory": { "default": false, "description": "حذف یک دسته بندی" },
+		"canEditChange": { "default": false, "description": "ویرایش تغییرات" },
+		"canEditCategory": { "default": false, "description": "ویرایش یک دسته بندی" },
+		"canViewAdmin": { "default": false, "description": "نمایش تغیرات ایجاد شده از طریق پنل مدیریت. نیاز به اجازه توسط مدیریت دارد " }
+	},
+
+	"roles": {
+		"view": {
+			"description": "نمایش تغیرات ایجاد شده",
+
+			"permissions": {
+				"view": true
+			}
+		},
+
+		"manage": {
+			"description": "مدیریت تغییرات <font style='color:red;'>مدیریت ابزار</font>",
+			"dangerLevel": 1,
+
+			"permissions": {
+				"canViewAdmin": true,
+				"canAddChange": true,
+				"canAddCategory": true,
+				"canRemoveChange": true,
+				"canEditChange": true,
+				"canRemoveCategory": true,
+				"canEditCategory": true
+			}
+		}
+	},
+
+	"admin": [
+		{
+			"text": "وب سایت",
+			"icon": "cursor",
+			"links": [
+				{
+					"text": "آپدیت ها",
+					"icon": "list",
+		 			"controller": "admin",
+		 			"requirePermission": "canViewAdmin"
+				}
+			]
+		}
+	],
+
+	"enabled": true
+}

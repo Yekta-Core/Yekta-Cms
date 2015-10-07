@@ -1,0 +1,29 @@
+{
+	"name":"Online players",
+	"description":"نمایش تمام شخصیت های آنلاین",
+	"author":
+	{
+		"name":"Yekta-CMS",
+		"website":"http://www.yekta-core.ir"
+	},
+	"permissions":
+	{
+		"view":
+		{
+			"default":true,
+			"description":"مشاهده صفحه بازیکنان آنلاین"
+		}
+	},
+	"roles":
+	{
+		"view":
+		{
+			"description":"مشاهده صفحه بازیکنان آنلاین",
+			"permissions":
+			{
+				"view":true
+			}
+		}
+	},
+	"enabled":true
+}

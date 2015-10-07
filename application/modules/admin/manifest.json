@@ -1,0 +1,291 @@
+{
+	"name": "Admin panel",
+	"description": "به طور پیش فرض مجموعه ای از ابزار و صفحات برای پنل مدیریت",
+	"author": {
+		"name": "Yekta-CMS",
+		"website": "http://www.yekta-core.ir"
+	},
+
+	"permissions": {
+		"view": { "default": false, "description": "مشخصات (ورود به) پنل مدیریت. مورد نیاز برای تمام محیط مدیریت ابزار" },
+		
+		"viewPermissions": { "default": false, "description": "مشاهده مجوزها" },
+		"addPermissions": { "default": false, "description": "اضافه کردن گروه ها، نقش ها و مجوز ها" },
+		"editPermissions": { "default": false, "description": "ویرایش گروه ها ، نقش ها و مجوز ها" },
+		"deletePermissions": { "default": false, "description": "حذف گروه ها ، نقش ها و مجوز." },
+		
+		"toggleModules": { "default": false, "description": "فعال یا غیرفعال سازی ماژول" },
+		"editModuleConfigs": { "default": false, "description": "ویرایش فایل های پیکربندی ماژول" },
+		
+		"changeThemeHeader": { "default": false, "description": "تغییر آدرس تصویر هدر تم" },
+		"changeTheme": { "default": false, "description": "تغییر قالب" },
+		
+		"viewLogs": { "default": false, "description": "نمایش گزارش ها" },
+		
+		"viewMenuLinks": { "default": false, "description": "نمایش منو لینک ها" },
+		"addMenuLinks": { "default": false, "description": "افزودن لینک ها" },
+		"editMenuLinks": { "default": false, "description": "ویرایش لینک ها" },
+		"deleteMenuLinks": { "default": false, "description": "حذف لینک ها" },
+		
+		"viewSideboxes": { "default": false, "description": "نمایش منو های کناری" },
+		"addSideboxes": { "default": false, "description": "اضافه کردن منو کنار" },
+		"editSideboxes": { "default": false, "description": "ویرایش منو های کناری" },
+		"deleteSideboxes": { "default": false, "description": "حذف منو های کناری" },
+
+		"viewLanguages": { "default": false, "description": "نمایش صفحه زبان ها" },
+		"changeDefaultLanguage": { "default": false, "description": "توانایی تغییر زبان پیشفرض" },
+
+		"viewMessage": { "default": false, "description": "نمایش پیام متاسفیم در هنگام بسته بودن سایت" },
+		"toggleMessage": { "default": false, "description": "تغییر وضعیت باز یا بسته بودن سایت" },
+
+		"viewCache": { "default": false, "description": "نمایش مدیریت کش" },
+		"emptyCache": { "default": false, "description": "خالی کردن کش" },
+
+		"viewSlider": { "default": false, "description": "نمایش تصاویر اسلاید ها" },
+		"addSlider": { "default": false, "description": "افزودن اسلاید" },
+		"editSlider": { "default": false, "description": "ویرایش اسلاید" },
+		"deleteSlider": { "default": false, "description": "حذف اسلاید" },
+
+		"viewAccounts": { "default": false, "description": "نمایش مدیریت اکانت ها" },
+		"editAccounts": { "default": false, "description": "توانایی ویرایش اکانت ها" },
+
+		"viewSessions": { "default": false, "description": "نمایش کاربران حاظر در سایت" },
+
+		"editSystemSettings": { "default": false, "description": "توانایی ویرایش تنظیمات و ریلم" }
+	},
+
+	"roles": {
+
+		"view": {
+			"description": "مشخصات (ورود به) پنل مدیریت. <b style='color:red;''>مورد نیاز برای تمام ابزارهای مدیریت</b>",
+			"dangerLevel": 2,
+
+			"permissions": {
+				"view": true
+			}
+		},
+
+		"managePermissions": {
+			"description": "مدیریت گروه ها و دسترسی ها <font style='color:red;'>ابزار مدیریت</font>",
+			"dangerLevel": 3,
+
+			"permissions": {
+				"viewPermissions": true,
+				"addPermissions": true,
+				"editPermissions": true,
+				"deletePermissions": true
+			}
+		},
+
+		"manageModules": {
+			"description": "مدیریت ماژول ها <font style='color:red;'>ابزار مدیریت</font>",
+			"dangerLevel": 3,
+
+			"permissions": {
+				"toggleModules": true,
+				"editModuleConfigs": true
+			}
+		},
+
+		"viewLogs": {
+			"description": "نمایش گزارش ها <font style='color:red;'>ابزار مدیریت</font>",
+			"dangerLevel": 2,
+
+			"permissions": {
+				"viewLogs": true
+			}
+		},
+
+		"viewSessions": {
+			"description": "نمایش کاربران حاظر در سایت <font style='color:red;'>ابزار مدیریت</font>",
+			"dangerLevel": 2,
+
+			"permissions": {
+				"viewSessions": true
+			}
+		},
+
+		"viewLanguage": {
+			"description": "نمایش زبان ها <font style='color:red;'>ابزار مدیریت</font>",
+			"dangerLevel": 2,
+
+			"permissions": {
+				"viewLanguages": true,
+				"changeDefaultLanguage": true
+			}
+		},
+
+		"manageMenu": {
+			"description": "مدیریت منو لینک ها <font style='color:red;'>ابزار مدیریت</font>",
+			"dangerLevel": 2,
+
+			"permissions": {
+				"viewMenuLinks": true,
+				"addMenuLinks": true,
+				"editMenuLinks": true,
+				"deleteMenuLinks": true
+			}
+		},
+
+		"manageSideboxes": {
+			"description": "مدیریت منو های کناری <font style='color:red;'>ابزار مدیریت</font>",
+			"dangerLevel": 2,
+
+			"permissions": {
+				"viewSideboxes": true,
+				"addSideboxes": true,
+				"editSideboxes": true,
+				"deleteSideboxes": true
+			}
+		},
+
+		"globalAnnouncement": {
+			"description": "تغییر وضعیت سایت <font style='color:red;'>ابزار مدیریت</font>",
+			"dangerLevel": 3,
+
+			"permissions": {
+				"viewMessage": true,
+				"toggleMessage": true
+			}
+		},
+
+		"manageCache": {
+			"description": "مدیریت کش های سایت <font style='color:red;'>ابزار مدیریت</font>",
+			"dangerLevel": 3,
+
+			"permissions": {
+				"viewCache": true,
+				"emptyCache": true
+			}
+		},
+
+		"manageSlider": {
+			"description": "مدیریت اسلاید ها <font style='color:red;'>ابزار مدیریت</font>",
+			"dangerLevel": 2,
+
+			"permissions": {
+				"viewSlider": true,
+				"addSlider": true,
+				"editSlider": true,
+				"deleteSlider": true
+			}
+		},
+
+		"manageAccounts": {
+			"description": "مدیریت اکانت ها <font style='color:red;'>ابزار مدیریت</font>",
+			"dangerLevel": 2,
+
+			"permissions": {
+				"viewAccounts": true,
+				"editAccounts": true
+			}
+		},
+
+		"manageTheme": {
+			"description": "مدیریت قالب ها <font style='color:red;'>ابزار مدیریت</font>",
+			"dangerLevel": 3,
+
+			"permissions": {
+				"changeThemeHeader": true,
+				"changeTheme": true
+			}
+		},
+
+		"editSystemSettings": {
+			"description": "مدیریت ویرایش تنظیمات و ریلم <font style='color:red;'>ابزار مدیریت</font>",
+			"dangerLevel": 3,
+
+			"permissions": {
+				"editSystemSettings": true
+			}
+		}
+	},
+
+	"admin": [
+
+		{
+			"text": "وبسایت",
+			"icon": "cursor",
+			"links": [
+				{
+					"text": "منو لینک ها",
+					"icon": "link",
+					"controller": "menu",
+					"requirePermission": "viewMenuLinks"
+				},
+
+				{
+					"text": "منو های کنار",
+					"icon": "database",
+					"controller": "sidebox",
+					"requirePermission": "viewSideboxes"
+				},
+
+				{
+					"text": "وضعیت سایت",
+					"icon": "power",
+					"controller": "message",
+					"requirePermission": "viewMessage"
+				},
+
+				{
+					"text": "گزارش های وبسایت",
+					"icon": "cursor",
+					"controller": "logging",
+					"requirePermission": "viewLogs"
+				},
+
+				{
+					"text": "مدیریت کش ها",
+					"icon": "database",
+					"controller": "cachemanager",
+					"requirePermission": "viewCache"
+				},
+
+				{
+					"text": "مدیریت اسلاید ها",
+					"icon": "windows",
+					"controller": "slider",
+					"requirePermission": "viewSlider"
+				},
+
+				{
+					"text": "زبان ها",
+					"icon": "star",
+					"controller": "languages",
+					"requirePermission": "viewLanguages"
+				}
+			]
+		},
+
+		{
+			"text":"کاربران",
+			"icon":"users",
+			"links": [
+				{
+					"text": "اکانت ها",
+					"icon": "users",
+					"controller": "accounts",
+					"requirePermission": "viewAccounts"
+				},
+				
+				{
+					"text": "گروه ها و دسترسی ها",
+					"icon": "settings",
+					"controller": "aclmanager",
+					"requirePermission": "viewPermissions"
+				},
+
+				{
+					"text": "بازدید های فعال",
+					"icon": "cursor",
+					"controller": "sessions",
+					"requirePermission": "viewSessions"
+				}
+			]
+		}
+
+	],
+
+	"enabled": true
+}

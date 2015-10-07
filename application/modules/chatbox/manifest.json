@@ -1,0 +1,14 @@
+{
+	"name": "Chat Box",
+	"description": "چت باکس و محلی برای چت بین کاربران",
+	"author": {
+		"name": "Keramat Jokar",
+		"website": "http://www.yekta-core.ir"
+	},
+
+	"admin": {
+		
+	},
+
+	"enabled":true
+}

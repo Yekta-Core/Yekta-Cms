@@ -1,0 +1,178 @@
+﻿/* 
+#				-CraftedWeb Generation II-                  
+#			 __                           __ _   							   
+#		  /\ \ \___  _ __ ___  ___  ___  / _| |_ 							   
+#		 /  \/ / _ \| '_ ` _ \/ __|/ _ \| |_| __|							   
+#		/ /\  / (_) | | | | | \__ \ (_) |  _| |_ 							   
+#		\_\ \/ \___/|_| |_| |_|___/\___/|_|  \__|	- www.Nomsoftware.com -	   
+#                  The policy of Nomsoftware states: Releasing our software   
+#                  or any other files are protected. You cannot re-release    
+#                  anywhere unless you were given permission.                 
+#                  أ‚آ© Nomsoftware 'Nomsoft' 2011-2012. All rights reserved. 
+*/
+
+
+
+
+hr { border-top: 1px solid #363636; border-bottom: 1px solid #161616; border-left: none; border-right: none; }
+h1 { margin: 4px; font-size: 36px; }
+h2 { margin: 3px; font-size: 30px; text-shadow: 0px 1px 6px #111; color: #0C0C0C;}
+h3 { margin: 2px; font-size: 22px; }
+h4 { margin: 1px; font-size: 18px; color: #71B100; }
+
+
+
+table { font-size: 12px !important; }
+
+input[type="text"], input[type="password"] { 
+	width: 400px;  
+	border: 1px solid #333; 
+	background-color: #FF00F5; 
+	padding-top: 9px; 
+	 
+	height: 13px; 
+	padding-left: 4px; 
+	padding-bottom: 8px;
+}
+
+
+
+
+
+select { 
+	width: 260px;  
+	border: 1px solid #333; 
+	background-color: #FF00F5; 
+	padding: 4px; 
+	
+	height: 30px; 
+}
+
+
+span.attention, span.notice, span.alert, span.download, span.approved, span.media, span.note, span.cart, span.email, span.doc, span.accept,span.vote, span.currency ,span.banacc, span.accvip ,span.error{
+	display: block;
+	padding: 8px 10px 8px 34px;
+	margin: 15px 0;
+	font-size: 20px;
+
+}
+
+span.attention {
+	color: #666;
+	border: 1px solid #a8a8a8;
+	background: #ccc url(../img/attention.png) 10px 50% no-repeat;
+}
+span.error {
+	color: Red;
+	border: 5px solid #E7BD72;
+	background: yellow url(../img/alert.png) 10px 50% no-repeat;
+}
+span.attention a{
+	color:#666; 
+	text-decoration:none; 
+	font-weight:bold;
+}
+
+span.notice {
+	color: #648434;
+	border: 1px solid #9BCC54;
+	background: #CDEFA6 url(../img/notice.png) 10px 50% no-repeat;
+}
+
+span.notice a{color: #648434;}
+span.alert {
+	color: #CF3738;
+	border: 1px solid #FFACAD;
+	background: #FFD5D5 url(../img/alert.png) 10px 50% no-repeat;
+}
+
+span.download {
+	color: #1C6B8B;
+	border: 1px solid #6ABCE2;
+	background: #A8CDE3 url(../img/download.png) 10px 50% no-repeat;
+}
+
+span.download a{color: #1C6B8B;}
+span.approved {
+	color: #666;
+	border: 1px solid #a8a8a8;
+	background: #ccc url(../img/approved.png) 10px 50% no-repeat;
+}
+
+span.media {
+	color: #C76E34;
+	border: 1px solid #FFBB65;
+	background: #FFE0B6 url(../img/media.png) 10px 50% no-repeat;
+}
+
+span.note {
+	color: #B79000;
+	border: 1px solid #E7BD72;
+	background: #FFF3A3 url(../img/note.png) 10px 50% no-repeat;
+}
+
+span.cart {
+	color: #666;
+	border: 1px solid #C5C5C5;
+	background: #E6E6E6 url(../img/cart.png) 10px 50% no-repeat;
+}
+
+span.email {
+	color: #666;
+	border: 1px solid #C5C5C5;
+	background: #E6E6E6 url(../img/email.png) 10px 50% no-repeat;
+}
+
+span.doc {
+	color: #C76E34;
+	border: 1px solid #FFBB65;
+	background: #FFE0B6 url(../img/doc.png) 10px 50% no-repeat;
+}
+
+span.doc a{
+	color: #C76E34; 
+	font-weight:bold; 
+	text-decoration:none;
+}
+
+span.accept{
+	color: #648434; 
+	border: 1px solid #9BCC54; 
+	background: #CDEFA6 url(../img/accept.png) 10px 50% no-repeat;
+}
+
+span.currency {
+
+	color: #B79000;
+	border: 1px solid #E7BD72;
+	background: #FFF3A3 url(../img/coins.png) 10px 50% no-repeat;
+}
+
+span.accvip {
+	color: green;
+	border: 1px solid #E7BD72;
+	background: #FF66FF url(../img/coins.png) 10px 50% no-repeat;
+}
+
+span.banacc {
+	color: green;
+	border: 5px solid #E7BD72;
+	background: #FFF3A3 url(../img/accept.png) 10px 50% no-repeat;
+}
+
+span.moreinfo {
+	color: #FFF;
+	border: 1px solid #0C1B2E;
+	background-image: url(../global/images/moreinfo.png); 
+	background-repeat: repeat-x;
+	display: block;
+	padding: 4px 3px 5px 6px;
+	margin: 5px 0; 
+	cursor:pointer;
+}
+
+span.vote {
+	color: #B79000;
+	border: 1px solid #1D73A7;
+	background: #85B3FE;
+}

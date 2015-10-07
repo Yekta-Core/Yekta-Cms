@@ -1,0 +1,24 @@
+{
+	"name": "Unban Character",
+	"description": "آزاد سازی هیرو های بن شده",
+	"author": {
+		"name": "Shayan_077",
+		"website": "http://www.yekta-core.ir"
+	},
+	
+	"permissions": {
+		"view": {"default" : true, "description": "مشاهده صفحه هیرو های بن شده" }
+	},
+
+	"roles": {
+		"view": {
+			"description": "مشاهده ماژول هیرو های بن شده",
+			
+			"permissions": {
+				"view": true
+			}
+		}
+	},
+
+	"enabled": true
+}

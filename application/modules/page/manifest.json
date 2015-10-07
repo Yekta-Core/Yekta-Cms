@@ -1,0 +1,47 @@
+{
+	"name": "Custom pages",
+	"description": "به شما اجازه میدهد که یک صفحه سفارشی بسازید",
+
+	"author": {
+		"name": "Yekta-CMS",
+		"website": "http://www.yekta-core.ir"
+	},
+
+	"admin": [
+		{
+			"text": "وب سایت",
+			"icon": "cursor",
+			"links": [
+				{
+					"text": "صفحه سفارشی",
+					"icon": "windows",
+					"controller": "admin",
+					"requirePermission": "canViewAdmin"
+				}
+			]
+		}
+	],
+
+	"permissions": {
+		"canViewAdmin": { "default": false, "description": "مدیریت صفحات سفارشی. نیاز به اجازه نمایش در مدیریت ماژول" },
+		"canAdd": { "default": false, "description": "اضافه کردن یک صفحه" },
+		"canRemove": { "default": false, "description": "حذف یک صفحه" },
+		"canEdit": { "default": false, "description": "ویرایش یک صفحه" }
+	},
+
+	"roles": {
+		"manage": {
+			"description": "مدیریت صفحات سفارشی <font style='color:red;'>ابزار مدیریت</font>",
+			"dangerLevel": 2,
+
+			"permissions": {
+				"canViewAdmin": true,
+				"canAdd": true,
+				"canRemove": true,
+				"canEdit": true
+			}
+		}
+	},
+	
+	"enabled": true
+}

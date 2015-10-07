@@ -1,0 +1,171 @@
+span.success-ui-alert {
+    color: #007700;
+}
+.clearfix {
+    clear: both;
+}
+.upload-gallery-image-form {
+    padding: 50px 0;
+}
+.upload-gallery-image-form .upload-field,
+.upload-gallery-image-form .description {
+    padding: 10px 0;
+}
+.upload-gallery-image-form .description {
+    text-align: center;
+}
+.upload-gallery-image-form .description input {
+    width: 98%;
+    /*height: 20px;*/
+}
+.gallery-image-list {
+    padding: 30px 0;
+}
+.gallery-image-list > .thumb {
+    float: left;
+    margin: 0 18px 12px 0;
+    position: relative;
+}
+.gallery-image-list > .thumb img {
+    -webkit-transition: 250ms outline;
+    -moz-transition: 250ms outline;
+    -ms-transition: 250ms outline;
+    -o-transition: 250ms outline;
+    transition: 250ms outline;
+    cursor: pointer;
+}
+.gallery-image-list > .thumb:hover img {
+    background: #f15d22;
+    outline: 5px solid #f15d22;
+}
+.gallery-image-list > .thumb > span.loader {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/loader.gif') rgba(255, 255, 255, 0.78) no-repeat center;
+    z-index: 10;
+}
+.gallery-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('../img/overlay-bg.png') rgba(255, 255, 255, .3);
+    z-index: 999999;
+}
+.gallery-overlay .image-container {
+    background: #000;
+    position: absolute;
+    z-index: 9999999;
+    opacity: 0;
+}
+.gallery-overlay .image-container table {
+    width: 100%;
+    height: 100%;
+}
+.gallery-overlay .image-container table tr,
+.gallery-overlay .image-container table tr td {
+    padding: 0;
+    margin: 0;
+}
+.gallery-overlay .image-container .image {
+    /*float: left;*/
+    text-align: center;
+    position: relative;
+}
+.gallery-overlay .image-container .info > div {
+    padding: 20px;
+}
+.gallery-overlay .image-container .info {
+    vertical-align: top;
+    width: 360px;
+    /*float: left;*/
+    background: #fff;
+}
+.gallery-overlay .image-container .info > div {
+    overflow: auto;
+    overflow-y: auto;
+}
+.gallery-overlay span[rel~="close"] {
+    width: 20px;
+    height: 20px;
+    background: url('../img/close-icon.png') no-repeat center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    opacity: 0.7;
+    -webkit-transition: all 100ms;
+    -moz-transition: all 100ms;
+    -ms-transition: all 100ms;
+    -o-transition: all 100ms;
+    transition: all 100ms;
+}
+.gallery-overlay span[rel~="close"]:hover {
+    opacity: 1;
+}
+.gallery-overlay .image-container .info .author img {
+    float: left;
+    margin-right: 15px;
+}
+.gallery-overlay .image-container .info .author .name {
+    color: #3b5998;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 21px;
+    text-shadow: none;
+}
+.gallery-overlay .image-container .info .author .date {
+    color: #999;
+    font-size: 12px;
+    text-shadow: none;
+}
+.gallery-overlay .image-container .info .description {
+    padding: 20px 0;
+    color: #333;
+    font-size: 13px;
+    text-shadow: none;
+}
+.gallery-overlay .image-container .image {
+    overflow: hidden;
+}
+.gallery-overlay .image-container .image > .actions {
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    opacity: 0;
+    display: inline-block;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.7);
+    -webkit-transition: 400ms all;
+    -moz-transition: 400ms all;
+    -ms-transition: 400ms all;
+    -o-transition: 400ms all;
+    transition: 400ms all;
+}
+.gallery-overlay .image-container .image > .actions a.delete {
+    float: right;
+    margin-top: -25px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.gallery-overlay .image-container .image:hover .actions {
+    opacity: 1;
+}
+.gallery-overlay .image-container .image .actions a.zoom {
+    background: url("../img/fullscreen.png") rgba(0, 0, 0, 0.8) no-repeat center;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-indent: -9999px;
+}
+
+.gallery-page .pages-links {
+    text-align: center;
+}
+.gallery-page .pages-links a {
+    margin: 0 10px;
+}

@@ -1,0 +1,82 @@
+{
+	"description": "اخبار نمایش سرور به کاربران. به عنوان صفحه اول",
+
+	"author": {
+		"name": "Yekta-CMS",
+		"website": "http://www.yekta-core.ir"
+	},
+
+	"admin": [
+		{
+			"text": "وب سایت",
+			"icon": "cursor",
+			"links": [
+				{
+					"text": "اخبار و اطلاعیه",
+					"icon": "file",
+					"controller": "admin",
+					"requirePermission": "canViewAdmin"
+				}
+			]
+		}
+	],
+
+	"permissions": {
+		"view": { "default": true, "description": "مشاهده اخبار" },
+		"canViewSpecificArticle": { "default": true, "description": "مشاهده مقاله خبری خاص" },
+		"canViewComments": { "default": true, "description": "مشاهده نظرات در مقالات خبری" },
+		"canAddComment": { "default": true, "description": "اضافه کردن یک نظر به مقاله" },
+		"canRemoveComment": { "default": false, "description": "حذف نظر از مقاله" },
+		"postCommentAsStaff": { "default": false, "description": "اضافه کردن نظر به یک مقاله به عنوان کارکنان" },
+		"canViewAdmin": { "default": false, "description": "مشاهده اخبار از طریق پنل مدیریت. نیاز به اجازه نمایش در مدیریت ماژول" },
+		"canAddArticle": { "default": false, "description": "اضافه کردن مقاله" },
+		"canRemoveArticle": { "default": false, "description": "حذف یک مقاله" },
+		"canEditArticle": { "default": false, "description": "ویرایش مقاله" }
+	},
+
+	"roles": {
+		"view": {
+			"description": "مشاهده اخبار",
+
+			"permissions": {
+				"view": true,
+				"canViewSpecificArticle": true,
+				"canViewComments": true
+			}
+		},
+
+		"use": {
+			"description": "ارسال نظر",
+
+			"permissions": {
+				"canAddComment": true
+			}
+		},
+
+		"moderate": {
+			"description": "متوسط نظرات",
+			"dangerLevel": 1,
+
+			"permissions": {
+				"canRemoveComment": true,
+				"postCommentAsStaff": true
+			}
+		},
+
+		"manage": {
+			"description": "مدیریت اخبار <font style='color:red;'>ابزار مدیریت</font>",
+			"dangerLevel": 2,
+
+			"permissions": {
+				"canViewAdmin": true,
+				"canAddArticle": true,
+				"canRemoveArticle": true,
+				"canEditArticle": true,
+				"canRemoveComment": true,
+				"postCommentAsStaff": true
+			}
+		}
+	},
+	
+	"enabled": true
+}

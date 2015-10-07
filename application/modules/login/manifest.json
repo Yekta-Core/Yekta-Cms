@@ -1,0 +1,24 @@
+{
+	"name": "Log in",
+	"description": "سیستم ورود کاربران",
+	"author": {
+		"name": "Yekta-CMS",
+		"website": "http://www.yekta-core.ir"
+	},
+
+	"enabled": true,
+
+	"permissions": {
+		"view": {"default" : true, "description": "مشاهده گزارش در صفحه" }
+	},
+
+	"roles": {
+		"view": {
+			"description": "مشاهده گزارش در صفحه",
+
+			"permissions": {
+				"view": true
+			}
+		}
+	}
+}

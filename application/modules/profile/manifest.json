@@ -1,0 +1,25 @@
+{
+	"name":"User profiles",
+	"description":"این گزینه برای نمایش اطلاعات کاربر و شخصیت آنها",
+	"author":
+	{
+		"name":"Yekta-CMS",
+		"website":"http://www.yekta-core.ir"
+	},
+	
+	"permissions": {
+		"view": { "default": true, "description": "مشاهده پروفایل کاربر" }
+	},
+
+	"roles": {
+		"view": {
+			"description": "مشاهده پروفایل کاربر",
+
+			"permissions": {
+				"view": true
+			}
+		}
+	},
+
+	"enabled":true
+}

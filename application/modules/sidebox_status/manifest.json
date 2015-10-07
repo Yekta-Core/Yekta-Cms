@@ -1,0 +1,11 @@
+{
+	"name": "Sidebox: server status",
+	"description": "نمایش تعداد بازیکنان آنلاین برای هر ریلم",
+
+	"author": {
+		"name": "Yekta-CMS",
+		"website": "http://www.yekta-core.ir"
+	},
+	
+	"enabled": true
+}

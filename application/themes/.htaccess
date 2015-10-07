@@ -1,0 +1,18 @@
+Options -Indexes
+# or #
+IndexIgnore *
+
+<Files ~ "\.php$">
+  Order allow,deny
+  Deny from all
+</Files>
+
+<Files ~ "\.tpl$">
+  Order allow,deny
+  Deny from all
+</Files>
+
+<Files ~ "\.json$">
+  Order allow,deny
+  Deny from all
+</Files>

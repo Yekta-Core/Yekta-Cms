@@ -1,0 +1,24 @@
+{
+	"name":"Guild viewer",
+	"description":"نمایش اعضای تیم",
+	"author":
+	{
+		"name":"Yekta-CMS",
+		"website":"http://www.yekta-core.ir"
+	},
+	"enabled":true,
+
+	"permissions": {
+		"view": {"default" : true, "description": "مشاهده صفحه تیم" }
+	},
+
+	"roles": {
+		"view": {
+			"description": "مشاهده صفحه تیم",
+
+			"permissions": {
+				"view": true
+			}
+		}
+	}
+}

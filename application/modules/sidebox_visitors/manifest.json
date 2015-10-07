@@ -1,0 +1,11 @@
+{
+	"name": "Sidebox: online visitors",
+	"description": "مقدار بازدید کنندگان در 5 دقیقه گذشته را نشان میدهد",
+
+	"author": {
+		"name": "Yekta-CMS",
+		"website": "http://www.yekta-core.ir"
+	},
+
+	"enabled": true
+}

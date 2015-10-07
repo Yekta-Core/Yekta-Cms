@@ -1,0 +1,14 @@
+{
+	"name": "Unban Account",
+	"description": "Unban Account Module",
+	"author": {
+		"name": "Shayan_077",
+		"website": "http://www.yekta-core.ir"
+	},
+
+	"admin": {
+		
+	},
+
+	"enabled":true
+}

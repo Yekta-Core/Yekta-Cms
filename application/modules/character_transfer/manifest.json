@@ -1,0 +1,49 @@
+{
+	"name": "Character Transfer (Account)",
+	"description": "ابزار انتقال هیرو از یک اکانت به اکانت دیگر برای کاربران",
+	"author": {
+		"name": "Yekta-CMS",
+		"website": "http://www.yekta-core.ir"
+	},
+	
+	"admin": [
+		{
+			"text": "انتقالات",
+			"icon": "share",
+			"links": [
+				{
+					"text": "گزارشات انتقال هیرو به اکانت",
+					"icon": "list",
+					"controller": "admin",
+					"requirePermission": "viewAdmin"
+				}
+			]
+		}
+	],
+
+	"permissions": {
+		"use_cta": {"default" : true, "description": "اجازه انتقال شخصیت" },
+		"viewAdmin": {"default" : false, "description": "مشاهده گزارش های انتقال شخصیت" }
+	},
+
+	"roles": {
+		"use": {
+			"description": "اجازه انتقال شخصیت",
+
+			"permissions": {
+				"use_cta": true
+			}
+		},
+
+		"administrate": {
+			"description": "مشاهده گزارش های انتقال شخصیت",
+			"dangerLevel": 2,
+
+			"permissions": {
+				"viewAdmin": true
+			}
+		}
+	},
+	
+	"enabled": true
+}

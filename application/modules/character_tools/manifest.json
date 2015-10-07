@@ -1,0 +1,24 @@
+{
+	"name": "Character Tools",
+	"description": "به کاربران شما ابزارهایی جهت ویرایش شخصیت ارائه میدهد",
+	"author": {
+		"name": "Yekta-CMS",
+		"website": "http://www.yekta-core.ir"
+	},
+	
+	"permissions": {
+		"view": {"default" : true, "description": "مشاهده صفحه نمایش ابزار شخصیت" }
+	},
+
+	"roles": {
+		"view": {
+			"description": "مشاهده صفحه نمایش ابزار شخصیت",
+			
+			"permissions": {
+				"view": true
+			}
+		}
+	},
+
+	"enabled": true
+}

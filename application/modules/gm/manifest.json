@@ -1,0 +1,36 @@
+{
+	"name":"GM panel",
+	"description":"ابزاری را برای گیم مستر ها فراهم میکند",
+	"author":
+	{
+		"name":"Yekta-CMS",
+		"website":"http://www.yekta-core.ir"
+	},
+
+	"permissions": {
+		"view": { "default": false, "description": "مشاهده پانل جی ام. مورد نیاز برای تمام ابزار جی ام" },
+		"sendItem": { "default": false, "description": "ارسال آیتم به بازیکنان" },
+		"unstuck": { "default": false, "description": "Use the unstuck tool on players" },
+		"answer": { "default": false, "description": "پاسخ به تیکت" },
+		"kick": { "default": false, "description": "کیک کردن پلیر" },
+		"ban": { "default": false, "description": "بن کردن" }
+	},
+
+	"roles": {
+		"manageTickets": {
+			"description": "مشاهده پانل جی ام. مورد نیاز برای تمام ابزار جی ام",
+			"dangerLevel": 1,
+
+			"permissions": {
+				"view": true,
+				"sendItem": true,
+				"unstuck": true,
+				"answer": true,
+				"kick": true,
+				"ban": true
+			}
+		}
+	},
+
+	"enabled":true
+}

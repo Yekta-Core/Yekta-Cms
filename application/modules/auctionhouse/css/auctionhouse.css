@@ -1,0 +1,166 @@
+#auction_house {
+	}
+	#auction_house #ah-top {
+		padding: 10px;
+		}
+		#auction_house #ah-top #ah-filters {
+			}
+			#auction_house #ah-top #ah-filters #realms {
+			float: left;
+			}
+			#auction_house #ah-top #ah-filters #factions {
+			float: right;
+			}
+		#auction_house #ah-top #ah-search {
+			margin: 10px auto;
+			}
+			#auction_house #ah-top #ah-search input[type="text"] {
+			width: 82%;
+			}
+			#auction_house #ah-top #ah-search input[type="submit"] {
+			width: 10%;
+			}
+	#auction_house #ah-auctions {
+		margin-bottom: 15px;
+		}
+		#auction_house #ah-auctions .ah-user-owned-auction .ah-column-owner a {
+		color: green;
+		}
+		#auction_house #ah-auctions #ah-sortable a {
+		font-weight: bold;
+		}
+		#auction_house #ah-auctions .ah-column-item {
+			}
+			.ah-column-item .item-icon {
+				height: 40px;
+				float:left;
+				vertical-align: middle;
+				position: relative;
+				}
+				.ah-column-item .item-stack {
+				position: absolute;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 18px;
+				line-height: 20px;
+				top: 18px;
+				left: 5px;
+				width: 30px;
+				text-align: right;
+				color: #fff;
+				text-shadow: 0 0 5px rgba(0,0,0,1), 0 0 3px rgba(0,0,0,1), 0 0 2px rgba(0,0,0,1);
+				}
+				.ah-column-item .item-icon img {
+				width: 38px; height: 38px;
+				}
+				.ah-column-item .item-icon a {
+				background-image:url(../../../images/misc/item_frame.png);
+				background-size: 100%;
+				width:44px;
+				height:44px;
+				margin-top:-3px;
+				margin-left:-3px;
+				position:absolute;
+				z-index:999;
+				display:block;
+				}
+			.ah-column-item .item-name {
+				float:left;
+				margin-left: 10px;
+				width: 80%;
+				height: 40px;
+				display: table;
+				}
+				.ah-column-item .item-name span {
+				display: table-cell; 
+				vertical-align: middle;
+				}
+		#auction_house #ah-auctions .ah-column-timeleft {
+			padding-left: 0;
+			padding-right: 0;
+			}
+		#auction_house #ah-auctions .ah-column-prices {
+			font-size: 11px;
+			line-height: 15px;
+			}
+			.ah-column-prices .ah-bid-price, .ah-column-prices .ah-buy-price {
+			text-align: right;
+				}
+				.ah-column-prices .ah-buy-price {
+				color: #b4a44c;
+				}
+			.ah-column-prices .ah-gold, .ah-column-prices .ah-silver, .ah-column-prices .ah-copper {
+				width: 10px;
+				height: 10px;
+				display: inline-block;
+				margin-right: 5px;
+				vertical-align: baseline;
+				}
+				.ah-column-prices .ah-gold {
+				background: url(../css/images/gold.png);
+				background-size: 100%;
+				}
+				.ah-column-prices .ah-silver {
+				background: url(../css/images/silver.png);
+				background-size: 100%;
+				}
+				.ah-column-prices .ah-copper {
+				background: url(../css/images/copper.png);
+				background-size: 100%;
+				}
+		#auction_house #ah-pagination {
+			padding: 10px 0 20px 0;
+			}
+			#auction_house #ah-pagination a, #auction_house #ah-pagination strong {
+			display: inline-block;
+			padding: 5px 10px;
+			box-shadow: inset 1px 1px 1px rgba(255,255,255,.04), inset -1px -1px 1px rgba(255,255,255,.04), 0 0 5px rgba(0,0,0,.4);
+			}
+			#auction_house #ah-pagination a {
+				background: rgba(255,255,255,.05);
+				}
+				#auction_house #ah-pagination a:hover {
+				background: rgba(255,255,255,.08);
+				}
+			#auction_house #ah-pagination strong {
+			background: rgba(255,255,255,.1);
+			}
+
+/* factions */
+.ah-faction-alliance { color: #247FAA; }
+.ah-faction-horde { color: #b30000; }
+.ah-faction-neutral { color: yellow; }
+
+.nice_table_mod {
+	box-shadow: inset 1px 1px 1px rgba(255,255,255,.04), inset -1px -1px 1px rgba(255,255,255,.04), 0 0 5px rgba(0,0,0,.4);
+	}
+	.nice_table tr:first-child td, .nice_table_mod tr:first-child td {
+	border: none;
+	}
+.nice_table {
+	}
+	.nice_table .tr-odd td {
+		background: rgba(255,255,255,.02);
+	}
+	.nice_table .tr-even td {
+		background: rgba(255,255,255,.05);
+	}
+	.tr-hover td {
+		background: rgba(255,255,255,.1) !important;
+	}
+
+.item {
+	width:40px;
+	height:40px;
+	}
+	.item a {
+	background-image:url(../../../images/misc/item_frame.png);
+	background-size: 100%;
+	width:44px;
+	height:44px;
+	margin-top:-3px;
+	margin-left:-3px;
+	position:absolute;
+	z-index:999;
+	display:block;
+	}
+		

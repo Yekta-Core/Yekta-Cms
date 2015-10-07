@@ -1,0 +1,11 @@
+{
+	"name": "Sidebox: custom",
+	"description": "به شما اجازه میدهد تا جعبه های کناری با متن دلخواه ایجاد کنید",
+
+	"author": {
+		"name": "Yekta-CMS",
+		"website": "http://www.yekta-core.ir"
+	},
+	
+	"enabled": true
+}

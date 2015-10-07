@@ -1,0 +1,80 @@
+{
+	"name": "Item store",
+	"description": "فروشگاه خرید آیتم برای کاربران",
+	"author": {
+		"name": "Yekta-CMS",
+		"website": "http://www.yekta-core.ir"
+	},
+
+	"permissions": {
+		"view": {"default" : true, "description": "مشاهده صفحه فروشگاه" },
+		"canViewOrders": {"default": false, "description": "سفارشات مشخصات فروشگاه" },
+		"canRefundOrders": {"default": false, "description": "پرداخت های شکست خورده" },
+		"canViewItems": {"default": false, "description": "نمایش آیتم های فروشگاه" },
+		"canAddItems": {"default": false, "description": "افزودن آیتم" },
+		"canRemoveItems": {"default": false, "description": "حذف آیتم" },
+		"canEditItems": {"default": false, "description": "ویرایش آیتم" },
+		"canAddGroups": {"default": false, "description": "افزودن گروه" },
+		"canRemoveGroups": {"default": false, "description": "حذف گروه" },
+		"canEditGroups": {"default": false, "description": "ویرایش گروه" }
+	},
+
+	"roles": {
+		"view": {
+			"description": "نمایش ماژول فروشگاه",
+
+			"permissions": {
+				"view": true
+			}
+		},
+
+		"moderate": {
+			"description": "مدیریت سفارشات فروشگاه <font style='color:red;'>ابزار مدیریت</font>",
+			"dangerLevel": 1,
+
+			"permissions": {
+				"canViewOrders": true,
+				"canRefundOrders": true
+			}
+		},
+
+		"manage": {
+			"description": "مدیریت آیتم های فروشگاه <font style='color:red;'>ابزار مدیریت</font>",
+			"dangerLevel": 2,
+
+			"permissions": {
+				"canViewItems": true,
+				"canAddItems": true,
+				"canRemoveItems": true,
+				"canEditItems": true,
+				"canAddGroups": true,
+				"canEditGroups": true,
+				"canRemoveGroups": true
+			}
+		}
+	},
+
+	"admin": [
+		{
+			"text": "فروشگاه",
+			"icon": "share",
+			"links": [
+				{
+					"text": "مدیریت آیتم",
+					"icon": "tag",
+					"controller": "admin_items",
+					"requirePermission": "canViewItems"
+				},
+				
+				{
+					"text": "سفارشات",
+					"icon": "users",
+					"controller": "admin_orders",
+					"requirePermission": "canViewOrders"
+				}
+			]
+		}
+	],
+
+	"enabled": true
+}

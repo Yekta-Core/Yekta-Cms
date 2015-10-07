@@ -1,0 +1,9 @@
+{
+	"name": "Error handler",
+	"description": "این گزینه برای نمایش خطاهای مربوط به اجازه و 404",
+	"author": {
+		"name": "Yekta-CMS",
+		"website": "http://www.yekta-core.ir"
+	},
+	"enabled": true
+}

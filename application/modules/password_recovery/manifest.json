@@ -1,0 +1,29 @@
+{
+	"name":"Password recovery",
+	"description":"نیازمند سرویس میل برای ارسال رمز عبور",
+	"author":
+	{
+		"name":"Yekta-CMS",
+		"website":"http://www.yekta-core.ir"
+	},
+	"permissions":
+	{
+		"view":
+		{
+			"default":true,
+			"description":"مشاهده صفحه بازیابی رمز عبور"
+		}
+	},
+	"roles":
+	{
+		"view":
+		{
+			"description":"مشاهده صفحه بازیابی رمز عبور",
+			"permissions":
+			{
+				"view":true
+			}
+		}
+	},
+	"enabled":true
+}

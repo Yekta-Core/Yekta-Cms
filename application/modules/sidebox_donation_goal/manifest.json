@@ -1,0 +1,11 @@
+{
+	"name": "Sidebox: donation goal",
+	"description": "نمایش نوار پیشرفت بر اساس اعتبار مالی ماهانه و هدف",
+
+	"author": {
+		"name": "Yekta-CMS",
+		"website": "http://www.yekta-core.ir"
+	},
+
+	"enabled": true
+}

@@ -1,0 +1,10 @@
+{
+	"name":"Item viewer",
+	"description":"مورد نیاز به راهنمای ابزار. گزینه ای برای نمایش محتوای راهنمای ابزار در یک صفحه مستقیم بصورت لینک",
+	"author":
+	{
+		"name":"Yekta-CMS",
+		"website":"http://www.yekta-core.ir"
+	},
+	"enabled":true
+}

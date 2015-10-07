@@ -1,0 +1,55 @@
+{
+	"name": "Teleport hub",
+	"description": "تلپورتر برای پلیر ها که میتواند با گلد و یا اعتبار باشد",
+	"author": {
+		"name": "Yekta-CMS",
+		"website": "http://www.yekta-core.ir"
+	},
+
+	"permissions": {
+		"view": {"default" : true, "description": "نمایش صفحه تلپورت" },
+		"canAdd": {"default" : false, "description": "افزودن منطقه جدید" },
+		"canRemove": {"default" : false, "description": "حذف منطقه" },
+		"canEdit": {"default" : false, "description": "ویرایش منطقه" },
+		"canViewAdmin": {"default" : false, "description": "مشاهده مناطق تلپورت در صفحه مدیریت" }
+	},
+
+	"roles": {
+		"view": {
+			"description": "مشاهده ماژول تلپورت",
+
+			"permissions": {
+				"view": true
+			}
+		},
+
+		"manage": {
+			"description": "مدیریت ماژول تلپورت <font style='color:red;'>ابزار مدیریت</font>",
+			"dangerLevel": 2,
+
+			"permissions": {
+				"canViewAdmin": true,
+				"canAdd": true,
+				"canRemove": true,
+				"canEdit": true
+			}
+		}
+	},
+
+	"admin": [
+		{
+			"text": "فروشگاه",
+			"icon": "share",
+			"links": [
+				{
+					"text": "مدیریت تلپورتر",
+					"icon": "pointer",
+					"controller": "admin",
+					"requirePermission": "canViewAdmin"
+				}
+			]
+		}
+	],
+
+	"enabled": true
+}

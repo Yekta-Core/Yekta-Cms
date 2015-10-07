@@ -1,0 +1,50 @@
+{
+	"name": "Donate panel",
+	"description": "سیستم پرداخت جهان پی",
+	"author": {
+		"name": "Keramat Jokar",
+		"website": "http://www.yekta-core.ir"
+	},
+
+	"admin": [
+		{
+			"text": "فروشگاه",
+			"icon": "share",
+			"links": [
+				{
+					"text": "گزارش تراکنش ها",
+					"icon": "list",
+					"controller": "admin",
+					"requirePermission": "viewAdmin"
+				}
+			]
+		}
+	],
+
+	"permissions": {
+		"view": {"default" : true, "description": "نمایش صفحه پرداخت ها" },
+		"viewAdmin": {"default" : false, "description": "نمایش گزارش تراکنش ها" }
+	},
+
+	"roles": {
+		"view": {
+			"description": "نمایش ماژول پرداخت",
+
+			"permissions": {
+				"view": true
+			}
+		},
+
+		"administrate": {
+			"description": "نمایش گزارش تراکنش ها",
+			"dangerLevel": 2,
+
+			"permissions": {
+				"viewAdmin": true
+			}
+		}
+	},
+
+
+	"enabled": true
+}

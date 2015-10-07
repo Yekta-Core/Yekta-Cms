@@ -1,0 +1,54 @@
+{
+	"name": "Sidebox: poll",
+	"description": "به شما اجازه میدهد تا برای سایت یک سوال و یا نظر سنجی ایجاد کنید",
+	"author": {
+		"name": "Yekta-CMS",
+		"website": "http://www.yekta-core.ir"
+	},
+
+	"admin": [
+		{
+			"text": "وبسایت",
+			"icon": "cursor",
+			"links": [
+				{
+					"text": "مدیریت نظرسنجی",
+					"icon": "heart",
+					"controller": "admin",
+					"requirePermission": "canViewAdmin"
+				}
+			]
+		}
+	],
+
+	"permissions": {
+		"canViewAdmin": { "default": false, "description": "مشاهده بخش مدیریت نظرسنجی" },
+		"vote": { "default": true, "description": "رای دادن در نظرسنجی ها" },
+		"createPoll": { "default": false, "description": "ایجاد نظر سنجی" },
+		"removePoll": { "default": false, "description": "حذف نظرسنجی" }
+	},
+
+	"roles": {
+
+		"use": {
+			"description": "استفاده از نظر سنجی در منو کنار",
+
+			"permissions": {
+				"vote": true
+			}
+		},
+
+		"manage": {
+			"description": "مدیریت نظر سنجی منو کنار <font style='color:red;'>ابزار مدیریت</font>",
+			"dangerLevel": 2,
+
+			"permissions": {
+				"canViewAdmin": true,
+				"createPoll": true,
+				"removePoll": true
+			}
+		}
+	},
+	
+	"enabled": true
+}

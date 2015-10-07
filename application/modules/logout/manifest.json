@@ -1,0 +1,10 @@
+{
+	"name": "Log out",
+	"description": "سیستم خروج کاربران و پاک کردن کوکی ها",
+	"author": {
+		"name": "Yekta-CMS",
+		"website": "http://www.yekta-core.ir"
+	},
+	
+	"enabled": true
+}

@@ -1,0 +1,171 @@
+/*
+ * Project: Responsive Theme RTK
+ * http://www.yekta-core.ir
+ *
+ * Copyright (c) 2015 Yekta-Core
+ *
+ * Author: Keramat Jokar
+ * Date: 5th June 2015
+ */
+ 
+/* Clearfix */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+
+/* Basic Styles */
+nav {
+	height: 40px;
+	width: 100%;
+	font-size: 11pt;
+	font-family: 'PT Sans', Arial, sans-serif;
+	font-weight: bold;
+	position: relative;
+	border-bottom: 2px solid #283744;
+	background: #03050C url("../images/menu.png") repeat scroll 0% 0%;
+}
+nav ul {
+	padding: 0;
+	margin: 0 auto;
+	width: 600px;
+	height: 40px;
+}
+nav li {
+	display: inline;
+	float: left;
+}
+nav a {
+	color: #fff;
+	display: inline-block;
+	width: 100px;
+	text-align: center;
+	text-decoration: none;
+	line-height: 40px;
+	text-shadow: 1px 1px 0px #283744;
+}
+nav li a {
+	border-right: 1px solid #000;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+nav li:last-child a {
+	border-right: 0;
+}
+nav a:hover, nav a:active {
+	background-color: #8c99a4;
+}
+nav a#pull {
+	display: none;
+}
+nav ul,
+nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+
+@media all and (max-width: 980px) {
+#wrapper {width: 980px;}
+#left {display: none !important;}
+#wrapper #top_menu {display: none; }
+#slider_bg {display: none !important;} 
+#right {float: right; margin-right: 176px; }
+footer .f_menu  {width: 356px !important;}
+body {background-size: 1072px 578px;}
+nav.clearfix{display: block !important;}
+nav {height: auto;}
+nav ul {width: 100%; display: block; height: auto;}
+nav li {width: 50%; float: left; position: relative;}
+nav li a {border-bottom: 1px solid #041802; border-right: 1px solid #000;}
+nav a {text-align: left; width: 100%; text-indent: 25px;}
+nav {border-bottom: 0;}
+nav ul {display: none; height: auto;}
+nav a#pull {display: block; background: #03050C url("../images/menu.png") repeat scroll 0% 0%; width: 100%; position: relative;}
+nav a#pull:after {content:""; background: url('../images/nav-icon.png') no-repeat; width: 30px; height: 30px; display: inline-block; position: absolute; right: 15px; top: 10px;}
+}
+@media only screen and (max-width: 800px) {
+#wrapper {width: 800px;}
+#right {margin-right: 37px;}
+body {background-size: 890px 481px;}
+.menu_icon {margin-right: 10px;}
+}
+@media only screen and (max-width: 768px) {
+#wrapper {width: 768px;}
+#right {margin-right: 22px;}
+footer .f_menu  {width: 296px !important;}
+body {background-size: 890px 481px;}
+}
+@media only screen and (max-width: 700px) {
+#wrapper {width: 700px;}
+#right { margin-right: 8px; width: 685px;}
+#right article {width: 678px;}
+#right article .top {width: 678px !important;}
+#right article .news_bottom{width: 678px;}
+footer .f_menu {width: 210px !important;}
+.mainbox-footer img {margin-left: 408px;}
+}
+@media only screen and (max-width: 600px) {
+#wrapper {width: 600px;}
+#right { margin-right: 6px; width: 585px;}
+#right article {width: 582px;}
+#right article .top {width: 582px !important;}
+#right article .news_bottom{width: 582px;}
+.mainbox-footer img {margin-left: 296px;}
+footer .f_menu  {display: none;}
+
+}
+@media only screen and (max-width: 500px) {
+#wrapper {width: 500px;}
+#right {width: 485px;}
+#right article {width: 482px;}
+#right article .top {width: 482px !important;}
+#right article .news_bottom{width: 482px;}
+.mainbox-footer img {margin-left: 196px;}
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width: 400px) {
+#wrapper {width: 400px;}
+#right {width: 385px;}
+#right article {width: 382px;}
+#right article .top {width: 382px !important;}
+#right article .news_bottom{width: 382px;}
+.mainbox-footer img {margin-left: 96px;}
+#top-logo {background-size: 543px 250px;}
+#top-logo:hover {background-size: 543px 250px;}
+body {background-size: 619px 460px;}
+}
+@media only screen and (max-width: 360px) {
+#wrapper {width: 360px;}
+#right {margin-right: 3px;}
+#right article {width: 350px; margin-left: 34px;}
+#right article .top {width: 350px !important;}
+#right article .news_bottom{width: 350px;}
+#top-logo {background-size: 559px 233px; margin-left: 5px; margin-top: -278px;}
+#top-logo:hover {background-size: 559px 233px; margin-left: 5px; margin-top: -278px;}
+body {background-size: 563px 343px;}
+#ucp_info {float: right; height: 272px; margin-left: 39px;}
+}
+@media only screen and (max-width: 320) {
+#wrapper {width: 320px !important;}
+#top-logo {background-size: 522px 233px; margin-left: 8px;}
+#top-logo:hover {background-size: 522px 233px; margin-left: 8px;}
+#right article {width: 310px !important; margin-left: 410px; !important}
+#right article .top {width: 310px !important;}
+#right article .news_bottom{width: 310px !important;}
+body {background-size: 539px 356px;}
+.menu_icon {margin-right: 46px;}
+nav li {display: block; float: none; width: 100%;}
+nav li a {border-bottom: 1px solid #576979;}
+}

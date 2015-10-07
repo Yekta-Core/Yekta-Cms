@@ -1,0 +1,10 @@
+{
+	"name": "Item tooltip",
+	"description": "مورد نیاز آرموری و شخصیت بیننده برای نمایش آمار آیتم ها",
+	"author": {
+		"name": "Yekta-CMS",
+		"website": "http://www.yekta-core.ir"
+	},
+	
+	"enabled": true
+}

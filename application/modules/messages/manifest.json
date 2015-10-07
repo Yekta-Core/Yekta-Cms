@@ -1,0 +1,29 @@
+{
+	"name": "Private messages",
+	"description": "اجازه میدهد که کاربران سایت شما با یکدیگر ارتباط خصوصی داشته باشند",
+
+	"author": {
+		"name": "Yekta-CMS",
+		"website": "http://www.yekta-core.ir"
+	},
+
+	"permissions": {
+		"view": {"default" : true, "description": "مشاهده پیام های خصوصی" },
+		"reply": {"default" : true, "description": "پاسخ به یک پیام خصوصی" },
+		"compose": {"default" : true, "description": "نوشتن یک پیام خصوصی جدید" }
+	},
+
+	"roles": {
+		"use": {
+			"description": "با استفاده از سیستم پیام خصوصی",
+
+			"permissions": {
+				"view": true,
+				"reply": true,
+				"compose": true
+			}
+		}
+	},
+	
+	"enabled": true
+}

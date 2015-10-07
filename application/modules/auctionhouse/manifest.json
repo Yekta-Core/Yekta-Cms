@@ -1,0 +1,49 @@
+{
+	"name": "Auction House Viewer",
+	"description": "نمایش حراج های داخل بازی",
+	"author": {
+		"name": "Yekta-CMS",
+		"website": "http://www.yekta-core.ir"
+	},
+	
+	"admin": [
+		{
+			"text": "فروشگاه",
+			"icon": "share",
+			"links": [
+				{
+					"text": "مرکز حراجی",
+					"icon": "list",
+					"controller": "admin",
+					"requirePermission": "viewAdmin"
+				}
+			]
+		}
+	],
+
+	"permissions": {
+		"view": {"default" : true, "description": "نمایش صفحه مرکز حراجی" },
+		"viewAdmin": {"default" : false, "description": "نمایش پنل ادمین مرکز حراجی" }
+	},
+
+	"roles": {
+		"view": {
+			"description": "نمایش ماژول مرکز حراجی",
+
+			"permissions": {
+				"view": true
+			}
+		},
+
+		"administrate": {
+			"description": "نمایش پنل ادمین مرکز حراجی",
+			"dangerLevel": 2,
+
+			"permissions": {
+				"viewAdmin": true
+			}
+		}
+	},
+	
+	"enabled": true
+}

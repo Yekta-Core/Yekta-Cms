@@ -1,0 +1,36 @@
+{
+	"name": "User panel",
+	"description": "مجموعه ای از اطلاعات کاربر و پنل کاربری را فراهم میکند",
+	"author": {
+		"name": "Yekta-CMS",
+		"website": "http://www.yekta-core.ir"
+	},
+
+
+    "permissions": {
+        "view": {"default" : true, "description": "نمایش صفحه پنل کاربری" },
+        "canUpdateAccountSettings": {"default": true, "description": "میتواند از طریق تنظیمات اکانت ، رمز عبور و ... را تغییر دهد"},
+        "canChangeExpansion": {"default" : true, "description": "میتواند پچ خود را بروزرسانی کند" }
+    },
+
+    "roles": {
+        "view": {
+            "description": "نمایش ماژول پنل کاربری",
+
+            "permissions": {
+                "view": true
+            }
+        },
+
+        "updateAccount": {
+            "description": "میتوانید اطلاعات اکانت را بروزرسانی کنید",
+
+            "permissions": {
+                "canUpdateAccountSettings": true,
+                "canChangeExpansion": true
+            }
+        }
+    },
+
+	"enabled": true
+}

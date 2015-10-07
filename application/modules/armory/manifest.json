@@ -1,0 +1,25 @@
+{
+	"description":"صفحه جستجو آرموری",
+	
+	"author":
+	{
+		"name":"Yekta-CMS",
+		"website":"http://www.yekta-core.ir"
+	},
+
+	"permissions": {
+		"view": { "default": true, "description": "مشاهده جستجو آرموری" }
+	},
+
+	"roles": {
+		"view": {
+			"description": "مشاهده جستجو آرموری",
+
+			"permissions": {
+				"view": true
+			}
+		}
+	},
+
+	"enabled":true
+}

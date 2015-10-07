@@ -1,0 +1,10 @@
+{
+	"name": "Recruitafriend",
+	"description": "ماژول دعوت نامه",
+	"author": {
+		"name": "Yekta-CMS",
+		"website": "http://www.yekta-core.ir"
+	},
+
+	"enabled":true
+}

@@ -1,0 +1,36 @@
+{
+	"name": "Sidebox: shoutbox",
+	"description": "سیستم ارسال پیغام در منو کنار سایت",
+	"author": {
+		"name": "Yekta-CMS",
+		"website": "http://www.yekta-core.ir"
+	},
+
+	"permissions": {
+		"shout": { "default": true, "description": "اضافه کردن متن" },
+		"removeShout": { "default": false, "description": "حذف کردن متن" },
+		"shoutAsStaff": { "default": false, "description": "دارید یک آیکون بلیزارد در کنار نام شما" }
+	},
+
+	"roles": {
+		"use": {
+			"description": "استفاده از تابلو گفتگو",
+
+			"permissions": {
+				"shout": true
+			}
+		},
+
+		"moderate": {
+			"description": "مدیریت نوشته ها",
+			"dangerLevel": 1,
+
+			"permissions": {
+				"removeShout": true,
+				"shoutAsStaff": true
+			}
+		}
+	},
+
+	"enabled": true
+}

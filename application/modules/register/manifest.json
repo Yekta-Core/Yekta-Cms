@@ -1,0 +1,25 @@
+{
+	"name": "Register",
+	"description": "به کاربران اجازه ثبت نام و ساخت اکانت میدهد",
+
+	"author": {
+		"name": "Yekta-CMS",
+		"website": "http://www.yekta-core.ir"
+	},
+	
+	"permissions": {
+		"view": { "default": true, "description": "مشاهده صفحه ثبت نام" }
+	},
+
+	"roles": {
+		"view": {
+			"description": "مشاهده صفحه ثبت نام",
+
+			"permissions": {
+				"view": true
+			}
+		}
+	},
+
+	"enabled": true
+}

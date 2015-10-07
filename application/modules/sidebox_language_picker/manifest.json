@@ -1,0 +1,24 @@
+{
+	"name": "Sidebox: language picker",
+	"description": "به کاربران اجازه میدهد زبان خود را انتخاب کنند",
+	"author": {
+		"name": "Yekta-CMS",
+		"website": "http://www.yekta-core.ir"
+	},
+
+	"permissions": {
+		"use": { "default": true, "description": "تنظیم زبان" }
+	},
+
+	"roles": {
+		"use": {
+			"description": "مشاهده جعبه تغییر زبان",
+
+			"permissions": {
+				"use": true
+			}
+		}
+	},
+	
+	"enabled": true
+}

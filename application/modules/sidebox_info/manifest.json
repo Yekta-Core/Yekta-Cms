@@ -1,0 +1,11 @@
+{
+	"name": "Sidebox: user info",
+	"description": "نمایش برخی از اطلاعات کاربر",
+	
+	"author": {
+		"name": "Yekta-CMS",
+		"website": "http://www.yekta-core.ir"
+	},
+
+	"enabled": true
+}

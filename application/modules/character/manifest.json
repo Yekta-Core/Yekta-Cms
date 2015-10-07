@@ -1,0 +1,29 @@
+{
+	"name":"Character viewer",
+	"description":"گزینه ای برای نمایش آمار شخصیت و آیتم ها",
+	"author":
+	{
+		"name":"Yekta-CMS",
+		"website":"http://www.yekta-core.ir"
+	},
+	"permissions":
+	{
+		"view":
+		{
+			"default":true,
+			"description":"مشاهده شخصیت ها"
+		}
+	},
+	"roles":
+	{
+		"view":
+		{
+			"description":"مشاهده شخصیت ها",
+			"permissions":
+			{
+				"view":true
+			}
+		}
+	},
+	"enabled":true
+}

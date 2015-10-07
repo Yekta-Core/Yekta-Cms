@@ -1,0 +1,11 @@
+{
+	"name": "Sidebox: PvP ladder",
+	"description": "برترین بازیکنان پی وی پی را نشان میدهد",
+
+	"author": {
+		"name": "Yekta-CMS",
+		"website": "http://www.yekta-core.ir"
+	},
+	
+	"enabled": true
+}

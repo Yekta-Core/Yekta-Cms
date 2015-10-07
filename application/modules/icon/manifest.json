@@ -1,0 +1,9 @@
+{
+	"name": "Icon provider",
+	"description": "مورد نیاز آموری برای نمایش آیکون",
+	"author": {
+		"name": "Yekta-CMS",
+		"website": "http://www.yekta-core.ir"
+	},
+	"enabled": true
+}

@@ -1,0 +1,24 @@
+{
+	"name": "Convert Play Time Player Ponits",
+	"description": "تبدیل مدت زمان آنلاین بودن پلیر به پوینت",
+	"author": {
+		"name": "Shayan_077",
+		"website": "http://www.yekta-core.ir"
+	},
+	
+	"permissions": {
+		"view": {"default" : true, "description": "نمایش صفحه تبدیل تایتم به پوینت" }
+	},
+
+	"roles": {
+		"view": {
+			"description": "نمایش ماژول تبدیل زمان به پوینت",
+			
+			"permissions": {
+				"view": true
+			}
+		}
+	},
+
+	"enabled": true
+}
