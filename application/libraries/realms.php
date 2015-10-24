@@ -346,6 +346,26 @@ class Realms
 			$class = "Deathknight";
 		}
 		else
+		if($class == "Monk")
+		{
+			$level = 90;
+		}
+		else
+		if($race == "Pandaren")
+		{
+			$level = 90;
+		}
+		else
+		if($race == "Worgen")
+		{
+			$level = 85;
+		}
+		else
+		if($race == "Goblin")
+		{
+			$level = 85;
+		}
+		else
 		{
 			// If character is below 30, use lv 1 image
 			if($character['level'] < 30)
