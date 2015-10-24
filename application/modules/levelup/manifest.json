@@ -1,0 +1,24 @@
+{
+	"name": "Levelup Character",
+	"description": "لول آپ  هیرو",
+	"author": {
+		"name": "Shayan",
+		"website": "http://www.yekta-core.ir"
+	},
+	
+	"permissions": {
+		"view": {"default" : true, "description": "نمایش صفحه لول آپ هیرو" }
+	},
+
+	"roles": {
+		"view": {
+			"description": "نمایش ماژول لول آپ",
+			
+			"permissions": {
+				"view": true
+			}
+		}
+	},
+
+	"enabled": true
+}
