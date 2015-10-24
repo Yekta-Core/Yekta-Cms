@@ -3,14 +3,14 @@
 		<tr>
 			<td><span id="username_error">{$username_error}</span></td>
 			<td>
-				 نام کاربری : <input style="width:60%;" type="text" name="login_username" id="login_username" value="{$username}"/>
+				{lang("username", "login")}<input type="text" name="login_username" id="login_username" value="{$username}"/>
 				
 			</td>
 		</tr>
 		<tr>
 			<td><span id="password_error">{$password_error}</span></td>
 			<td>
-				کلمه عبور : <input style="width:60%;" type="password" name="login_password" id="login_password" value=""/>
+				{lang("password", "login")}<input type="password" name="login_password" id="login_password" value="" AUTOCOMPLETE="off"/>
 				
 			</td>
 		</tr>
