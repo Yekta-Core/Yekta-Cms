@@ -1,12 +1,12 @@
 <section class="box big" id="main_changelog">
 	<h2>
 		<img src="{$url}application/themes/admin/images/icons/black16x16/ic_grid.png"/>
-		آپدیت ها (<div style="display:inline;" id="changelog_count">{if !$changes}0{else}{count($changes)}{/if}</div>)
+{lang("update", "changelog")} (<div style="display:inline;" id="changelog_count">{if !$changes}0{else}{count($changes)}{/if}</div>)
 	</h2>
 	
 	{if hasPermission("canAddCategory")}
 		<span>
-			<a class="nice_button" href="javascript:void(0)" onClick="Changelog.add()">ایجاد دسته جدید</a>
+			<a class="nice_button" href="javascript:void(0)" onClick="Changelog.add()">{lang("new_category", "changelog")}</a>
 		</span>
 	{/if}
 
@@ -24,11 +24,11 @@
 						<td style="text-align:right;" width="10%">
 							
 							{if hasPermission("canEditCategory")}
-								<a href="javascript:void(0)" onClick="Changelog.renameCategory({$category.id}, this)" data-tip="تغییر نام دسته"><img src="{$url}application/themes/admin/images/icons/black16x16/ic_edit.png" /></a>&nbsp;
+								<a href="javascript:void(0)" onClick="Changelog.renameCategory({$category.id}, this)" data-tip="{lang("c_n_c", "changelog")}"><img src="{$url}application/themes/admin/images/icons/black16x16/ic_edit.png" /></a>&nbsp;
 							{/if}
 							
 							{if hasPermission("canRemoveCategory")}
-								<a href="javascript:void(0)" onClick="Changelog.removeCategory({$category.id}, this)" data-tip="حذف دسته و کلیه آپدیت های این دسته"><img src="{$url}application/themes/admin/images/icons/black16x16/ic_minus.png" /></a>
+								<a href="javascript:void(0)" onClick="Changelog.removeCategory({$category.id}, this)" data-tip="{lang("r_c_u", "changelog")}"><img src="{$url}application/themes/admin/images/icons/black16x16/ic_minus.png" /></a>
 							{/if}
 						</td>
 					</tr>
@@ -63,12 +63,12 @@
 </section>
 
 <section class="box big" id="add_changelog" style="display:none;">
-	<h2><a href='javascript:void(0)' onClick="Changelog.add()" >آپدیتها</a> &rarr; ایجاد دسته جدید</h2>
+	<h2><a href='javascript:void(0)' onClick="Changelog.add()" >{lang("update", "changelog")}</a>{lang("new_category2", "changelog")}</h2>
 
 	<form onSubmit="Changelog.create(this); return false" id="submit_form">
-		<label for="name">نام دسته</label>
+		<label for="name">{lang("category_name", "changelog")}</label>
 		<input type="text" name="typeName" id="typeName" />
 	
-		<input type="submit" value="ذخیره" />
+		<input type="submit" value="{lang("save", "changelog")}" />
 	</form>
 </section>

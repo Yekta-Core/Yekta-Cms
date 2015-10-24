@@ -26,18 +26,18 @@
     </ul>
 
 	<form onSubmit="Auctionhouse.RunScanner(); return false">
-		<input type="submit" value="!اجرای اسکنر" />
+		<input type="submit" value="{lang("s_scan", "auctionhouse")}" />
 	</form>
 </section>
 
 <section class="box big">
-	<h2>Auction House تنظیمات</h2>
+	<h2>{lang("setting", "auctionhouse")}</h2>
     
 	<form onSubmit="Auctionhouse.submitConfigSource(); return false" id="advanced">
-        <label for="source">سورس کد</label>
+        <label for="source">{lang("source", "auctionhouse")}</label>
 
         <textarea id="source" name="source" rows="30" spellcheck="false">{$config}</textarea>
 
-        <input type="submit" value="ذخیره تنظیمات" />
+        <input type="submit" value="{lang("save", "auctionhouse")}" />
     </form>
 </section>

@@ -1,8 +1,8 @@
 <meta http-equiv="refresh" content="40">
 <div align="center">
 {form_open('chatbox')}
-<input dir="rtl" type="text" name="text" placeholder="...پیام" style="width:535px; ">
-<input type="submit" name="submit" value="ارسال"><br />
+<input dir="rtl" type="text" name="text" placeholder="{lang("pm", "chatbox")}" style="width:535px; ">
+<input type="submit" name="submit" value="{lang("send", "chatbox")}"><br />
 </form>
 <br />
 

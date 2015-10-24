@@ -22,8 +22,8 @@
 		
 		{if $total}
 			{foreach from=$characters item=realm}
-              <div class="teleport_realm_divider"> نام ریلم: {$realm.realmName}</div>
-                <div class="teleport_realm_divider">هیرو باید حتما آفلاین باشد</div>
+              <div class="teleport_realm_divider">{lang("realm_name", "character_tools")} {$realm.realmName}</div>
+                <div class="teleport_realm_divider">{lang("teleport_realm_divider", "character_tools")}</div>
 				
 				{foreach from=$realm.characters item=character}
                  {if $character.online==0}
@@ -52,7 +52,7 @@
 	</section>
     
 	<section id="select_tool">
-    	<div class="online_realm_button">انتخاب سرویس</div>
+    	<div class="online_realm_button">{lang("select_tool", "character_tools")}</div>
         
         <div class="select_tools">
         
@@ -61,15 +61,15 @@
                 <div class="tool store_item">
                     <section class="tool_buttons">
                         <a href="javascript:void(0)" class="nice_button" onClick="CharacterTools.Purchase(this, 1, {$config->item('name_change_price')})">
-                            انتخاب سرویس
+                            {lang("select_tool", "character_tools")}
                         </a>
                     </section>
     
                     <img class="item_icon" data-tip="Change your characters’ names" src="{$url}application/modules/character_tools/css/images/inv_misc_note_06.jpg" width="36" height="36" src="" align="absmiddle">
     
-                    <a class="tool_name" data-tip="تغییر نام هیروی انتخاب شده">تغییر نام</a>
+                    <a class="tool_name" data-tip="{lang("c_n_h_s", "character_tools")}">{lang("change_name", "character_tools")}</a>
                     <br />
-                    {if $config->item('name_change_price') > 0}هزینه : {$config->item('name_change_price')} امتیاز ویژه{else}Free of charge{/if}
+                    {if $config->item('name_change_price') > 0}{lang("price", "character_tools")} {$config->item('name_change_price')} {lang("vp", "character_tools")}{else}{lang("free", "character_tools")}{/if}
                     <div class="clear"></div>
                 </div>
             </div>
@@ -79,15 +79,15 @@
                 <div class="tool store_item">
                     <section class="tool_buttons">
                         <a href="javascript:void(0)" class="nice_button" onClick="CharacterTools.Purchase(this, 2, {$config->item('race_change_price')})">
-                            انتخاب سرویس
+                           {lang("select_tool", "character_tools")}
                         </a>
                     </section>
     
                     <img class="item_icon" data-tip="Change a character’s race (within your current faction)" src="{$url}application/modules/character_tools/css/images/race_change.jpg" width="36" height="36" src="" align="absmiddle">
     
-                    <a class="tool_name" data-tip="تغییر نژاد هیروی انتخاب شده">تغییر نژاد</a>
+                    <a class="tool_name" data-tip="{lang("race_t", "character_tools")}">{lang("race", "character_tools")}</a>
                     <br />
-                    {if $config->item('race_change_price') > 0}هزینه : {$config->item('race_change_price')} امتیاز ویژه{else}Free of charge{/if}
+                    {if $config->item('name_change_price') > 0}{lang("price", "character_tools")} {$config->item('name_change_price')} {lang("vp", "character_tools")}{else}{lang("free", "character_tools")}{/if}
                     <div class="clear"></div>
                 </div>
             </div>
@@ -97,15 +97,15 @@
                 <div class="tool store_item">
                     <section class="tool_buttons">
                         <a href="javascript:void(0)" class="nice_button" onClick="CharacterTools.Purchase(this, 3, {$config->item('faction_change_price')})">
-                            انتخاب سرویس
+                           {lang("select_tool", "character_tools")}
                         </a>
                     </section>
     
                     <img class="item_icon" data-tip="Change a character’s faction (Horde to Alliance or Alliance to Horde)" src="{$url}application/modules/character_tools/css/images/faction_change.jpg" width="36" height="36" src="" align="absmiddle">
     
-                    <a class="tool_name" data-tip="تغییر رسته هیرو ( Horde/Alliance )">تغییر رسته</a>
+                    <a class="tool_name" data-tip="{lang("faction_t", "character_tools")}">{lang("faction", "character_tools")}</a>
                     <br />
-                    {if $config->item('faction_change_price') > 0}هزینه : {$config->item('faction_change_price')} امتیاز ویژه{else}Free of charge{/if}
+                    {if $config->item('name_change_price') > 0}{lang("price", "character_tools")} {$config->item('name_change_price')} {lang("vp", "character_tools")}{else}{lang("free", "character_tools")}{/if}
                     <div class="clear"></div>
                 </div>
             </div>
@@ -115,15 +115,15 @@
                 <div class="tool store_item">
                     <section class="tool_buttons">
                         <a href="javascript:void(0)" class="nice_button" onClick="CharacterTools.Purchase(this, 4, {$config->item('appearance_change_price')})">
-                            انتخاب سرویس
+                            {lang("select_tool", "character_tools")}
                         </a>
                     </section>
     
                     <img class="item_icon" data-tip="Change your characters’ appearance (optional name change included)" src="{$url}application/modules/character_tools/css/images/achievement_character_human_female.jpg" width="36" height="36" src="" align="absmiddle">
     
-                    <a class="tool_name" data-tip="تغییر ظاهر و نام هیرو">تغییر ظاهر</a>
+                    <a class="tool_name" data-tip="{lang("appearance_t", "character_tools")}">{lang("appearance", "character_tools")}</a>
                     <br />
-                    {if $config->item('appearance_change_price') > 0}هزینه : {$config->item('appearance_change_price')} امتیاز ویژه{else}رایگان{/if}
+                    {if $config->item('name_change_price') > 0}{lang("price", "character_tools")} {$config->item('name_change_price')} {lang("vp", "character_tools")}{else}{lang("free", "character_tools")}{/if}
                     <div class="clear"></div>
                 </div>
             </div>
@@ -134,15 +134,15 @@
                     <section class="tool_buttons">
                         <a href="javascript:void(0)" class="nice_button"
                          onClick="CharacterTools.Purchase(this, 6, {$config->item('revive_change_price')})">
-                             انتخاب سرویس
+                             {lang("select_tool", "character_tools")}
                         </a>
                     </section>
     
                     <img class="item_icon" data-tip="Unstuck is Characters" src="{$url}application/modules/character_tools/css/images/Revive.jpg" width="36" height="36" src="" align="absmiddle">
     
-                    <a class="tool_name" data-tip="Unstuck is Characters">زنده کردن هیرو</a>
+                    <a class="tool_name" data-tip="Unstuck is Characters">{lang("revive", "character_tools")}</a>
                     <br />
-                    {if $config->item('revive_change_price') > 0}هزینه : {$config->item('revive_change_price')}  امتیاز ویژه{else}رایگان{/if}
+                    {if $config->item('name_change_price') > 0}{lang("price", "character_tools")} {$config->item('name_change_price')} {lang("vp", "character_tools")}{else}{lang("free", "character_tools")}{/if}
                     <div class="clear"></div>
                 </div>
             </div>
@@ -152,15 +152,15 @@
                     <section class="tool_buttons">
                         <a href="javascript:void(0)" class="nice_button"
                          onClick="CharacterTools.Purchase(this, 5, {$config->item('revive_change_price')})">
-                             انتخاب سرویس
+                             {lang("select_tool", "character_tools")}
                         </a>
                     </section>
     
                     <img class="item_icon" data-tip="Unstuck is Characters" src="{$url}application/modules/character_tools/css/images/unstuck.jpg" width="36" height="36" src="" align="absmiddle">
     
-                    <a class="tool_name" data-tip="Unstuck is Characters">نجات هیرو</a>
+                    <a class="tool_name" data-tip="Unstuck is Characters">{lang("unstuck", "character_tools")}</a>
                     <br />
-                    {if $config->item('unstuck_change_price') > 0}هزینه : {$config->item('unstuck_change_price')}  امتیاز ویژه{else}رایگان{/if}
+                    {if $config->item('name_change_price') > 0}{lang("price", "character_tools")} {$config->item('name_change_price')} {lang("vp", "character_tools")}{else}{lang("free", "character_tools")}{/if}
                     <div class="clear"></div>
                 </div>
             </div>

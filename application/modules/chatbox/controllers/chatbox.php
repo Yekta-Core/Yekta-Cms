@@ -12,19 +12,9 @@ class chatbox extends MX_Controller
 
 	public function index()
 	{
-
-
-
-
 		if($this->input->post('submit'))
        {
-   
-
-        
-
            $this->myModel->insert();
-         
-
        }
 		// Prepare the values we want to use in the view
 		$data = array(
@@ -85,7 +75,6 @@ class chatbox extends MX_Controller
    return false;
 
     }
-
 
 	}
 }

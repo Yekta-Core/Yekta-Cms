@@ -121,7 +121,7 @@ var CharacterTools = {
 				}
 				
 				CharacterTools.IsLoading = false;
-				$(".active_tool").find('.nice_button').html("Purchase");
+				$(".active_tool").find('.nice_button').html(lang("select", "teleport"));
 				$(".active_tool").removeClass("active_tool");
 			});
 		}

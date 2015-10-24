@@ -15,7 +15,7 @@
 $lang['type_comment'] = "نظری را تایپ کنید ...";
 $lang['characters'] = "کاراکتر ها";
 $lang['submit'] = "ثبت نظر";
-$lang['log_in'] = "لطفاً برای نظر دادن وارد شویدس";
+$lang['log_in'] = "لطفاً برای نظر دادن وارد شوید";
 $lang['view_profile'] = "مشاهده پروفایل";
 $lang['comments'] = "نظرات";
 $lang['posted_by'] = "پست شده توسط";
