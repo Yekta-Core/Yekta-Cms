@@ -1,6 +1,6 @@
 <?php
 
-require_once(dirname(__FILE__).'/trinity_rbac_cata_soap.php');
+require_once(dirname(__FILE__).'/skyfire_rbac_cata_soap.php');
 
 /**
  * Abstraction layer for supporting different emulators
