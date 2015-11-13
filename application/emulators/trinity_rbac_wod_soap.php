@@ -283,7 +283,7 @@ class Trinity_rbac_cata_soap implements Emulator
 		}
 	}
 
-	/**
+	/*
 	 * Send mail via ingame mail to a specific character
 	 * @param String $character
 	 * @param String $subject
