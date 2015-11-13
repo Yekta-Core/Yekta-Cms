@@ -8,7 +8,7 @@ require_once(dirname(__FILE__).'/skyfire_rbac_cata_soap.php');
 
 class Skyfire_rbac_mop_ra extends Skyfire_rbac_mop_soap implements Emulator
 {	
-	/**
+	/*
 	 * The telnet socket
 	 */
 	protected $telnetSocket;
