@@ -7,6 +7,7 @@ $emulators = array(
 	"trinity_rbac_soap" => "TrinityCore (3.3.5) with RBAC - connected through SOAP",
 	"trinity_rbac_cata_ra" => "TrinityCore (4.3.4) with RBAC - connected through RA",
 	"trinity_rbac_cata_soap" => "TrinityCore (4.3.4) with RBAC - connected through SOAP",
+	"trinity_rbac_wod_soap" => "TrinityCore (6.x) with RBAC - connected through SOAP",
 	"skyfire_rbac_mop_ra" => "SkyFire (5.4.8) with RBAC - connected through RA",
 	"skyfire_rbac_mop_soap" => "SkyFire (5.4.8) with RBAC - connected through SOAP",
 	"oregoncore_ra" => "OregonCore (2.4.3) - connected through RA",
