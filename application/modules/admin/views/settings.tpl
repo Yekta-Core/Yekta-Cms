@@ -140,11 +140,12 @@
 
 			<label for="disabled_expansions" dir="rtl" align="right">پچ</label>
 			<select id="disabled_expansions">
-				<option value="mop" {if count($config.disabled_expansions) == 0}selected{/if}>Mists Of Pandaria</option>
-				<option value="cata" {if count($config.disabled_expansions) == 1}selected{/if}>Cataclysm</option>
-				<option value="wotlk" {if count($config.disabled_expansions) == 2}selected{/if}>Wrath of the Lich King</option>
-				<option value="tbc" {if count($config.disabled_expansions) == 3}selected{/if}>The Burning Crusade</option>
-				<option value="none" {if count($config.disabled_expansions) == 4}selected{/if}>No expansion allowed</option>
+				<option value="wod" {if count($config.disabled_expansions) == 0}selected{/if}>warlords of draenor</option>
+				<option value="mop" {if count($config.disabled_expansions) == 1}selected{/if}>Mists Of Pandaria</option>
+				<option value="cata" {if count($config.disabled_expansions) == 2}selected{/if}>Cataclysm</option>
+				<option value="wotlk" {if count($config.disabled_expansions) == 3}selected{/if}>Wrath of the Lich King</option>
+				<option value="tbc" {if count($config.disabled_expansions) == 4}selected{/if}>The Burning Crusade</option>
+				<option value="none" {if count($config.disabled_expansions) == 5}selected{/if}>No expansion allowed</option>
 			</select>
 
 			<label for="keywords" dir="rtl" align="right">موتور جستجو:  کلمات کلیدی و با کاما جدا شود.</label>
