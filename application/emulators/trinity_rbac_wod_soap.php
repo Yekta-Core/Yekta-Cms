@@ -4,7 +4,7 @@
  * Abstraction layer for supporting different emulators
  */
 
-class Trinity_rbac_cata_soap implements Emulator
+class Trinity_rbac_wod_soap implements Emulator
 {
 	protected $config;
 	
@@ -27,7 +27,7 @@ class Trinity_rbac_cata_soap implements Emulator
 	 * Array of expansion ids and their corresponding names
 	 */
 	protected $expansions = array(
-      5=>"WOD"
+                5 => "WOD",
 		3 => "Cataclysm",
 		2 => "WotLK",
 		1 => "TBC",
