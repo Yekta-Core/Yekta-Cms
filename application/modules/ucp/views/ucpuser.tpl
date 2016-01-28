@@ -1,11 +1,3 @@
-<style type="text/css">
-<!--
-#main {
-	direction: rtl;
-}
--->
-
-</style>
 <section id="ucp_top">
 		<img src="{$url}application/images/avatars/profile.png"/>
 

@@ -33,5 +33,5 @@ $lang['username'] = "نام کاربری";
 $lang['email'] = "ایمیل";
 $lang['password'] = "رمز عبور";
 $lang['confirm'] = "تکرار رمز عبور";
-$lang['expansion'] = "توسعه";
+$lang['expansion'] = "پچ";
 $lang['submit'] = "ساخت اکانت!";
