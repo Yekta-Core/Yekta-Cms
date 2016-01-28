@@ -28,7 +28,7 @@ CREATE TABLE `articles` (
   `content` text NOT NULL,
   `timestamp` int(11) NOT NULL,
   `author_id` int(11) NOT NULL,
-  `avatar` varchar(255) DEFAULT NULL,
+  `avatar` text,
   `comments` int(11) DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
@@ -214,7 +214,6 @@ INSERT INTO `menu` (`id`, `name`, `link`, `side`, `rank`, `specific_rank`, `orde
 	(110, '{"Persian":"گالری تصاویر"}', 'gallery', 'side', 1, 0, 112),
 	(111, '{"Persian":"آزاد سازی هیرو"}', 'unban_char', 'side', 1, 0, 105),
 	(112, '{"Persian":"آزاد سازی اکانت"}', 'unban', 'side', 1, 0, 104),
-	(113, '{"Persian":"دعوت نامه"}', 'recruitafriend', 'side', 1, 0, 106);
 /*!40000 ALTER TABLE `menu` ENABLE KEYS */;
 /*!40014 SET FOREIGN_KEY_CHECKS=1 */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
