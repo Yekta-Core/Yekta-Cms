@@ -54,7 +54,7 @@
 		<div class="body body-s">
 		
 			<form onSubmit="Login.send(this); return false" class="sky-form">
-				<header>Admin Panel</header>
+				<header>Admin Panel (پنل مدیریت)</header>
 				
 				<fieldset>					
 					<section>
@@ -98,13 +98,13 @@
 						<div class="row">
 							<div class="col col-4"></div>
 							<div class="col col-8">
-								<label class="checkbox"><input type="checkbox" name="checkbox-inline" checked><i></i>Keep me logged in</label>
+								<label class="checkbox"><input type="checkbox" name="checkbox-inline" checked><i></i>به خاطر بسپار</label>
 							</div>
 						</div>
 					</section>
 				</fieldset>
 				<footer>
-					<button type="submit" class="button">Log in</button>
+					<button type="submit" class="button">ورود</button>
 				</footer>
 			</form>
 			

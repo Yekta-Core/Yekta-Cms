@@ -51,6 +51,7 @@ a:hover {
 	font-size: 25px;
 	font-weight: 300;
 	color: #232323;
+	direction: rtl;
 }
 .sky-form fieldset {
 	display: block;	
@@ -1565,4 +1566,13 @@ a:hover {
 .sky-form .checkbox.state-disabled:hover i,
 .sky-form .toggle.state-disabled:hover i {
 	border-color: #e5e5e5;
+}
+
+.error {
+	box-shadow:1px 1px 0px #000 inset, 0px 0px 10px #9c1d1d !important;
+	-webkit-box-shadow:1px 1px 0px #000 inset, 0px 0px 10px #9c1d1d !important;
+	-moz-box-shadow:1px 1px 0px #000 inset, 0px 0px 10px #9c1d1d !important;
+	-o-box-shadow:1px 1px 0px #000 inset, 0px 0px 10px #9c1d1d !important;
+	-ms-box-shadow:1px 1px 0px #000 inset, 0px 0px 10px #9c1d1d !important;
+	border:1px solid #c03a3a !important;
 }
