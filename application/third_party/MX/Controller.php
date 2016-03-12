@@ -91,11 +91,11 @@ class MX_Controller
 		// Default to current version
 		if(!array_key_exists("min_required_version", $module))
 		{
-			$module['min_required_version'] = CI::$APP->config->item('FusionCMSVersion');
+			$module['min_required_version'] = CI::$APP->config->item('YektaCMSVersion');
 		}
 
 		// Does the module got the correct version?
-		if(!CI::$APP->template->compareVersions($module['min_required_version'], CI::$APP->config->item('FusionCMSVersion')))
+		if(!CI::$APP->template->compareVersions($module['min_required_version'], CI::$APP->config->item('YektaCMSVersion')))
 		{
 			show_error("The module <b>".strtolower($moduleName)."</b> requires FusionCMS v".$module['min_required_version'].", please update at fusion-hub.com");
 		}

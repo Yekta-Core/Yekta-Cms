@@ -383,9 +383,9 @@ class Update
 		{
 			self::$currentVersion = $config['v'];
 		}
-		elseif(array_key_exists("FusionCMSVersion", $config))
+		elseif(array_key_exists("YektaCMSVersion", $config))
 		{
-			self::$currentVersion = $config['FusionCMSVersion'];
+			self::$currentVersion = $config['YektaCMSVersion'];
 		}
 		else
 		{

@@ -1,1 +1,1 @@
-<?php $config['FusionCMSVersion'] = '2.0.0';
+<?php $config['YektaCMSVersion'] = '2.0.1';

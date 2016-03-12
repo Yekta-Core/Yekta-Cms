@@ -86,7 +86,7 @@ class Admin extends MX_Controller
 			$updates = array_reverse($updates);
 		}
 
-		if($this->template->compareVersions($updates[0], $this->config->item('FusionCMSVersion'), true))
+		if($this->template->compareVersions($updates[0], $this->config->item('YektaCMSVersion'), true))
 		{
 			return $updates[0];
 		}

@@ -330,7 +330,7 @@ class Administrator
 	 */
 	public function getVersion()
 	{
-		return $this->CI->config->item('FusionCMSVersion');
+		return $this->CI->config->item('YektaCMSVersion');
 	}
 	
 	/**
