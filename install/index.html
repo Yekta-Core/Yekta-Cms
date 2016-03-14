@@ -128,35 +128,35 @@
 										<h3>چه چیز هایی برای اجرای این سیستم نیاز هست ؟</h3>
 									    
                                         <div class="folder-permissions">
-                                            <h4>Folder Permissions</h4>
-    										<div style="font-weight:bold;margin:10px 0px;" id="config_folder">&bull; /application/config/ needs to be writable (see <a href="http://en.wikipedia.org/wiki/Chmod" target="_blank">chmod</a>)</div>
+                                            <h4>دسترسی های پوشه</h4>
+    										<div style="font-weight:bold;margin:10px 0px;" id="config_folder">&bull; /application/config/ نیاز به قابل نوشتن</div>
 
-    										<div style="font-weight:bold;margin:10px 0px;" id="modules_folder">&bull; /application/modules/ is writable</div>
+    										<div style="font-weight:bold;margin:10px 0px;" id="modules_folder">&bull; /application/modules/ قابل نوشتن است</div>
 
     										<div style="font-weight:bold;margin:10px 0px;" id="cache_folder">&bull; /application/cache/</div>
                                         </div>
 										
 										<div class="php-version">
-											<h4>PHP Version</h4>
-											Minimum required PHP version: 5.3 <span class="check-result"></span>
+											<h4>نسخه PHP</h4>
+											حداقل نسخه PHP مورد نیاز: 5.3 <span class="check-result"></span>
 										</div>
                                         
                                         <div class="php-extensions">
-                                            <h4>PHP Extensions</h4>
+                                            <h4>افزونه های PHP</h4>
                                             
-                                            <b>The following PHP extensions are required:</b><br>
+                                            <b>افزونه های زیر لازم است :</b><br>
     										php_mysqli, php_curl, php_openssl, php_soap, php_gd, php_mbstring, php_json
 
 											<span class="check-result" style="display:none"></span>
                                             <div id="php-extensions-missing" style="display:none;color:red;margin-top:15px">
-                                                <b>The following modules are missing:</b>
+                                                <b>ماژول های زیر غیر فعال است :</b>
                                                 <span class="extensions"></span>
                                             </div>
                                             
     										<div class="how_to_box">
-                                                <div class="title">How do I enable PHP extensions?</div>
+                                                <div class="title">چگونه برنامه های افزودنی PHP را فعال کنم؟</div>
                                                 <div class="content">
-        											Go into your PHP directory and find the <code>php.ini</code> file. Mine was located in <code>C:\wamp\bin\php\php5.3.13</code>. Open the file with a text editor and search (CTRL+F) for one of the modules you need to enable. To enable them, simply remove the <code>;</code> character in front of the line.<br />Save the file and restart your webserver to apply the changes.<br /><br />
+        											به مسیر محل وجود PHP خود بروید و فایل <code>php.ini</code> را پیدا کنید. برای مثال در Wamp در این مسیر <code>C:\wamp\bin\php\php5.3.13</code> است . و در Xampp در مسیر <code>C:\xampp\php</code>  میتوانید فایل را پیدا کنید . برای مثال باز کردن یکی از افزونه های PHP فایل <code>php.ini</code> را با یک ویرایشگر متن و جستجو باز کنید. برای مثال برای فعال کردن openssl به دنبال کلمه openssl بگردید و  <code>;</code> که در مقابل خط وجود دارد را حذف کنید .<br />فایل را ذخیره کنید و برای ثبت تغییرات آپاچی را یک بار خاموش و دوباره اجرا کنید .<br /><br />
 
         											<img src="images/php.jpg" style="border:1px solid #ccc" />
                                                 </div>
@@ -164,22 +164,22 @@
                                         </div>
                                         
                                         <div class="apache-modules">
-                                            <h4>Apache Modules</h4>
+                                            <h4>ماژول های آپاچی</h4>
                                             
-    										<b>We recommend FusionCMS in combination with an Apache Webserver.<br><br>
-                                            The Apache modules you'll need are:</b> <br>
+    										<b>ما توصیه میکنیم یکتا سی ام اس را روی وب سرور آپاچی و یا هاست نصب کنید<br><br>
+                                            ماژول های آپاچی مورد نیاز شما عبارتند از :</b> <br>
                                             mod_rewrite, mod_headers, mod_expires, mod_deflate
 
 											<span class="check-result" style="display:none"></span>
                                             <div id="apache-modules-missing" style="display:none;color:#e18f00;margin-top:15px">
-                                                <b>The following modules are missing:</b>
+                                                <b>ماژول های زیر غیر فعال است :</b>
                                                 <span class="modules"></span>
                                             </div>
     										
                                             <div class="how_to_box">
-                                                <div class="title">How do I enable Apache modules?</div>
+                                                <div class="title">چگونه ماژول های آپاچی را فعال کنم؟</div>
                                                 <div class="content">
-        											Go into your Apache directory and find the <code>httpd.conf</code> file. Mine was located in <code>C:\wamp\bin\apache\apache2.2.22\conf\</code>. Open the file with a text editor and search <code>CTRL+F</code> for one of the modules you need to enable. To enable them, simply remove the <code>#</code> character in front of the line.<br />Save the file and restart your webserver to apply the changes.<br /><br />
+        											به مسیر محل وجود Apache خود بروید و فایل <code>httpd.conf</code> را پیدا کنید. برای مثال در Wamp در این مسیر <code>C:\wamp\bin\apache\apache2.2.22\conf</code> است . و در Xampp در مسیر <code>C:\xampp\apache\conf</code>  میتوانید فایل را پیدا کنید . برای مثال باز کردن یکی از افزونه های Apache فایل <code>httpd.conf</code> را با یک ویرایشگر متن و جستجو باز کنید. برای مثال برای فعال کردن mod_rewrite به دنبال کلمه mod_rewrite بگردید و  <code>#</code> که در مقابل خط وجود دارد را حذف کنید .<br />فایل را ذخیره کنید و برای ثبت تغییرات آپاچی را یک بار خاموش و دوباره اجرا کنید .<br /><br />
         											<img src="images/apache.jpg" style="border:1px solid #ccc" />
                                                 </div>
     										</div>

@@ -27,9 +27,16 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'iran_sans_light';
+	src: url('../font/iran_sans_light.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
 /* General */
 body {
-	font-family:'MuseoSans', Arial, Helvetica, Sans-serif;
+	font-family:'MuseoSans', iran_sans_light, Helvetica, Sans-serif;
 	color:#393939;
 	background-color:#3b3b3b;
 	line-height:1.5;
@@ -69,7 +76,7 @@ h4 {
     font-size: 18px;
     font-weight: bold;
     margin: 20px 0px 7px 0px;
-    font-family: 'MuseoSans', Arial, Helvetica, Sans-serif;
+    font-family: 'MuseoSans', iran_sans_light, Helvetica, Sans-serif;
 }
 
 .clear {
@@ -137,7 +144,7 @@ header .logo, footer #logo .logo {
 
 header .right .welcome {
 	color:#909090;
-	font-size:16px;
+	font-size: 14px;
 	text-shadow:1px 1px 0px #000;
 	float:right;
 	margin-top:17px;
@@ -259,7 +266,7 @@ header nav .active:hover {
 	height:33px;
 	padding-left:15px;
 	padding-top:11px;
-	font-size:16px;
+	font-size: 14px;
 	color:#fff;
 	text-shadow:1px 1px 0px rgba(0,0,0,0.6);
 	text-decoration:none;
@@ -381,10 +388,10 @@ header nav .active:hover {
 	padding:0px;
 	text-shadow:1px 1px 1px #000;
 	text-align:center;
-	font-size:16px;
+	font-size: 14px;
 	color:#eee;
 	font-weight:normal;
-	font-family:'MuseoSlab', Arial, Helvetica, Sans-serif;
+	font-family:'MuseoSlab', iran_sans_light, Helvetica, Sans-serif;
 }
 
 #main .left article a, #main .right section span a, #main .right section form label a {
@@ -466,7 +473,7 @@ header nav .active:hover {
 	text-align:center;
 	width:100%;
 	font-weight:normal;
-	font-family:MuseoSlab, Arial, Helvetica, Sans-serif;
+	font-family:MuseoSlab, iran_sans_light, Helvetica, Sans-serif;
 	font-size:20px;
 	color:#000;
 	text-shadow:1px 1px 0px #fff;
@@ -504,7 +511,7 @@ header nav .active:hover {
 	display:block;
 	position:absolute;
 	font-family:MuseoSlab;
-	font-size:16px;
+	font-size: 14px;
 	color:#000000;
 	width:660px;
 	padding:5px;
@@ -556,7 +563,7 @@ header nav .active:hover {
 	display:block;
 	color:#171717;
 	font-family:MuseoSlab;
-	font-size:16px;
+	font-size: 14px;
 	margin-top:5px;
 	font-weight:normal;
 }
@@ -589,10 +596,10 @@ header nav .active:hover {
 	margin:0px;
 	padding:0px;
 	text-align:center;
-	font-family:MuseoSlab;
+	font-family:iran_sans_light;
 	font-weight:normal;
 	color:#171717;
-	font-size:16px;
+	font-size: 14px;
 	padding-top:10px;
 	padding-bottom:10px;
 	background-color:#bebebe;
@@ -763,7 +770,7 @@ input[type="text"],
 input[type="password"],
 input[type="email"]
 {
-	font-family:Arial, Helvetica, Sans-serif;
+	font-family:iran_sans_light, Helvetica, Sans-serif;
 	font-size:12px;
 	display:block;
 	width:99%;
@@ -793,7 +800,7 @@ input[type="email"]:focus {
 }
 
 select {
-	font-family:Arial, Helvetica, Sans-serif;
+	font-family:iran_sans_light, Helvetica, Sans-serif;
 	font-size:12px;
 	width:99%;
 	padding:8px;
@@ -811,7 +818,7 @@ select {
 
 /* Footer */
 footer {
-	font-family:'MuseoSlab', Arial, Helvetica, Sans-serif;
+	font-family:'MuseoSlab', iran_sans_light, Helvetica, Sans-serif;
 	background-color:#2d2d2d;
 	margin-top:50px;
 	border-top:1px solid #494949;
@@ -927,7 +934,7 @@ footer .divider2 {
 }
 
 .introduction h3 {
-	font-size:18px;
+	font-size: 14px;
 	margin:0px;
 	padding:0px;
 	margin-bottom:10px;
