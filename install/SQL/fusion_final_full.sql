@@ -213,7 +213,7 @@ INSERT INTO `menu` (`id`, `name`, `link`, `side`, `rank`, `specific_rank`, `orde
 	(109, '{"Persian":"مرکز حراجی"}', 'auctionhouse', 'side', 1, 0, 111),
 	(110, '{"Persian":"گالری تصاویر"}', 'gallery', 'side', 1, 0, 112),
 	(111, '{"Persian":"آزاد سازی هیرو"}', 'unban_char', 'side', 1, 0, 105),
-	(112, '{"Persian":"آزاد سازی اکانت"}', 'unban', 'side', 1, 0, 104),
+	(112, '{"Persian":"آزاد سازی اکانت"}', 'unban', 'side', 1, 0, 104);
 /*!40000 ALTER TABLE `menu` ENABLE KEYS */;
 /*!40014 SET FOREIGN_KEY_CHECKS=1 */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
