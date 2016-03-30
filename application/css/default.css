@@ -294,9 +294,19 @@ input[type="radio"] {
 }
 
 /* First column (the field label, in most cases) */
+.page_form {
+	direction: rtl !important;
+}
+
 .page_form table td:first-child {
-	padding-left:20px;
-	width:20%;
+	width: 25% !important;
+	padding-right: 20px !important;
+	padding-left: 0 !important;
+}
+
+.page_form label {
+	margin-right: 0 !important;
+	margin-left: 15px !important;
 }
 
 .page_form label {
@@ -740,20 +750,5 @@ input[type="radio"] {
 .color-c7 { color: #0070DE; } /* shaman */
 .color-c8 { color: #69CCF0; } /* mage */
 .color-c9 { color: #9482C9; } /* warlock */
+.color-c10 { color: #00ffba; } /* monk */
 .color-c11 { color: #FF7D0A; } /* druid */
-
-
-.page_form {
-	direction: rtl !important;
-}
-
-.page_form table td:first-child {
-	width: 25% !important;
-	padding-right: 20px !important;
-	padding-left: 0 !important;
-}
-
-.page_form label {
-	margin-right: 0 !important;
-	margin-left: 15px !important;
-}
