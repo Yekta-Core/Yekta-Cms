@@ -15,7 +15,7 @@
 $lang['doesnt_exist'] = "نام کاربری وجود ندارد";
 $lang['doesnt_exist_long'] = "نام کاربری درخواست شده وجود ندارد";
 $lang['nickname'] = "نام مستعار";
-$lang['location'] = "تلفن تماس";
+$lang['location'] = "مکان";
 $lang['status'] = "وضعیت";
 $lang['signed_up'] = "ثبت نام شده";
 $lang['rank'] = "مقام";

@@ -15,7 +15,7 @@
 $lang['invalid'] = "گیلد یا ریلم مشخص نا معتبر است";
 $lang['invalid_guild'] = "گیلد نا معتبر است";
 $lang['armory'] = "آرموری";
-$lang['no_motd'] = "این گیلد Message Of the Day ندارد";
+$lang['no_motd'] = "این گیلد پیام روزانه ندارد";
 $lang['members'] = "اعضا";
 $lang['leader'] = "لیدر";
 $lang['doesnt_exist'] = "گیلد درخواست شده وجود ندارد";
