@@ -69,10 +69,10 @@ class Donate extends MX_Controller {
             $Description = $this->input->post("item_name");
 			$api=$this->config->item('api');
 			$callback=$this->config->item('callback');
-            $Client = new SoapClient("http://www.jahanpay.com/webservice?wsdl");
+            $Client = new SoapClient("http://pay.jahanpay.ir/webservice?wsdl");
             $Result = $Client->requestpayment($api, $Amount, $callback, 7, $Description);
 
-            header("Location: http://www.jahanpay.com/pay_invoice/$Result");
+            header("Location: http://pay.jahanpay.ir/pay_invoice/$Result");
         }
 
 		public function jahanpayreturnback()
@@ -84,7 +84,7 @@ class Donate extends MX_Controller {
 			$this->session->unset_userdata('Amount');
 			if (strlen($Authority) > 4)
 			{
-				$Client = new SoapClient("http://www.jahanpay.com/webservice?wsdl");
+				$Client = new SoapClient("http://pay.jahanpay.ir/webservice?wsdl");
 				$Result = $Client->verification($api, $Amount,$Authority);
 				if ($Result == 1)
 				{
