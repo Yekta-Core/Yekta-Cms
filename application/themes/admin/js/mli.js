@@ -94,7 +94,7 @@ function MultiLanguageInput(field)
 			var text = "";
 		}
 
-		var newField = $("<input type='text' data-lang='" + language + "' style='padding-left:70px;' value='" + text + "'/>");
+		var newField = $("<input type='text' data-lang='" + language + "' style='padding-right:80px;' value='" + text + "'/>");
 
 		// Assign blur event
 		newField.on('blur', function()
@@ -104,7 +104,7 @@ function MultiLanguageInput(field)
 			field.val(JSON.stringify(data));
 		});
 
-		var flag = '<div style="position:absolute;margin-top:11px;margin-left:10px;font-weight:bold;font-size:12px;">' + language + '</div>';
+		var flag = '<div style="position:absolute;margin-top:11px;margin-right:10px;font-weight:bold;font-size:12px;">' + language + '</div>';
 
 		return [flag, newField];
 	};
