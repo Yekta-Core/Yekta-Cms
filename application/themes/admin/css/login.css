@@ -1,3 +1,10 @@
+@font-face {
+	font-family: 'iran_sans_light';
+	src: url('../../../fonts/iran_sans_light.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
 html, body {
 	margin: 0;
 	padding: 0;
@@ -36,7 +43,7 @@ a:hover {
 	margin: 0;
 	outline: none;
 	box-shadow: 0 0 20px rgba(0,0,0,.3);
-	font: 13px/1.55 'Open Sans', Helvetica, Arial, sans-serif;
+	font: 13px/1.55 'Open Sans', Helvetica, iran_sans_light, sans-serif;
 	color: #666;
 }
 .sky-form * {
@@ -49,6 +56,7 @@ a:hover {
 	border-bottom: 1px solid rgba(0,0,0,.1);
 	background: rgba(248,248,248,.9);
 	font-size: 25px;
+	font-family:MuseoSlab, iran_sans_light;
 	font-weight: 300;
 	color: #232323;
 	direction: rtl;
@@ -119,7 +127,6 @@ a:hover {
 	border-style: solid;
 	border-radius: 0;
 	background: #fff;
-	font: 15px/19px 'Open Sans', Helvetica, Arial, sans-serif;
 	color: #404040;
 	appearance: normal;
 	-moz-appearance: none;
@@ -213,6 +220,7 @@ a:hover {
 .sky-form .checkbox {
 	margin-bottom: 4px;
 	padding-left: 27px;
+	font-family:MuseoSlab, iran_sans_light;
 	font-size: 15px;
 	line-height: 27px;
 	color: #404040;
@@ -374,7 +382,7 @@ a:hover {
 	padding: 0 25px;
 	outline: none;
 	border: 0;
-	font: 300 15px/39px 'Open Sans', Helvetica, Arial, sans-serif;
+	font-family:MuseoSlab, iran_sans_light;
 	text-decoration: none;
 	color: #fff;
 	cursor: pointer;
