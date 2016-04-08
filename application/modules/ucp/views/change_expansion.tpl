@@ -1,7 +1,7 @@
 {form_open('ucp/expansion', 'class="page_form"')}
 	<table style="width:80%">
 		<tr>
-
+			<td><label for="expansion">{lang("expansion", "ucp")}</label></td>
 			<td>
 				<select id="expansion" name="expansion">
 					{foreach from=$expansions key=id item=expansion}

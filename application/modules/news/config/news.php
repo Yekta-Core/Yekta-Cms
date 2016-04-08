@@ -21,6 +21,6 @@ $config['news_limit'] = 30;
 | RSS Feed configuration
 |--------------------------------------------------------------------------
 */
-$config['rss_feed_name'] = "JahanWoW";
+$config['rss_feed_name'] = "YektaCMS";
 $config['rss_description'] = "The best world of warcraft server in the world!";
 $config['rss_lang'] = "en-us";

@@ -1,11 +1,12 @@
 #ucp_top {
 	padding:5px;
 	padding-bottom:10px;
+	direction: rtl;
 }
 
 #ucp_avatar {
 	display:block;
-	float:left;
+	float:right;
 	width:120px;
 	height:120px;
 }

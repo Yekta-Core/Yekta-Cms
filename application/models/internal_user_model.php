@@ -16,9 +16,6 @@ class Internal_user_model extends CI_Model
 	private $nickname;
 	private $permissionCache;
 	private $language;
-	private $codemeli;
-	private $name;
-	private $family;
 	
 	public function __construct()
 	{
@@ -35,13 +32,9 @@ class Internal_user_model extends CI_Model
 		{
 			$this->vp = 0;
 			$this->dp = 0;
-			$this->location = "0";
-			$this->codemeli = "0";
-	//		$this->smsregister = "0";
+			$this->location = "";
 			$this->nickname = "";
 			$this->language = $this->config->item('language');
-			$this->name = "0";
-			$this->family = "0";
 		}
 	}
 
@@ -69,11 +62,6 @@ class Internal_user_model extends CI_Model
 			$this->location = $result[0]['location'];
 			$this->nickname = $result[0]['nickname'];
 			$this->language = $result[0]['language'];
-			$this->codemeli = $result[0]['codemeli'];
-			$this->name = $result[0]['name'];
-			$this->family = $result[0]['family'];
-		//  $this->smsregister = $result[0]['smsregister'];
-			
 		}
 		else 
 		{
@@ -90,11 +78,7 @@ class Internal_user_model extends CI_Model
 			'id' => $this->external_account_model->getId(),
 			'vp' => 0,
 			'dp' => 0,
-			'location' => "0",
-			'codemeli' => "0",
-			'name' => "0",
-			'family' => "0",
-			//'smsregister' =>
+			'location' => "Unknown",
 			'nickname' => $this->external_account_model->getUsername(),
 			'language' => $this->config->item('language')
 		);
@@ -103,13 +87,10 @@ class Internal_user_model extends CI_Model
 
 		$this->vp = 0;
 		$this->dp = 0;
-		$this->location = "0";
-		$this->codemeli = "0";
-		$this->smsregister = "0";
+		$this->location = "Unknown";
 		$this->nickname = $this->external_account_model->getUsername();
-		$this->name = "0";
-		$this->family ="0";
 	}
+
 	public function nicknameExists($nickname)
 	{
 		$count = $this->connection->from('account_data')->where(array('nickname' => $nickname))->count_all_results();
@@ -249,21 +230,6 @@ class Internal_user_model extends CI_Model
 	public function getLocation()
 	{
 		return $this->location;
-	}
-	 public function getcodemeli()
-	{
-		return $this->codemeli;
-	}
-
-	public function getAccountname()
-	{
-		return $this->name;
-	}
-    
-
-    public function getfamily()
-	{
-		return $this->family;
 	}
 
 	public function getLanguage()

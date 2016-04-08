@@ -1,20 +1,21 @@
 <section id="ucp_top">
-		<img src="{$url}application/images/avatars/profile.png"/>
+	<a href="{$url}ucp/avatar" id="ucp_avatar">
+		<div>{lang("change_avatar", "ucp")}</div>
+		<img src="{$avatar}"/>
+	</a>
 
 	<section id="ucp_info">
-		
-
 		<aside>
 			<table width="100%">
-				<tr data-tip="قابل دریافت میباشد Vote مجموعه امتیاز شما, امتیاز گیری رایگان بوده و از طریق سیستم">
+				<tr data-tip="{lang("data_tip_vote", "ucp")}">
 					<td width="10%"><img src="{$url}application/images/icons/lightning.png" /></td>
 					<td width="40%">{lang("voting_points", "ucp")}</td>
-					<td width="50%">{$vp} پوینت</td>
+					<td width="50%">{$vp}</td>
 				</tr>
-				<tr data-tip="اعتباز, موجودی تومانی شما میباشد که به شما این امکان را میدهد تا از امکانات پولی سایت استفاده کنید">
+				<tr data-tip="{lang("data_tip_donate", "ucp")}">
 					<td width="10%"><img src="{$url}application/images/icons/coins.png" /></td>
-					<td width="40%"><span style="color:#4CFF00">{lang("donation_points", "ucp")}</span></td>
-					<td width="50%"><span style="color:#4CFF00">{$dp} تومان</span></td>
+					<td width="40%">{lang("donation_points", "ucp")}</td>
+					<td width="50%">{$dp}</td>
 				</tr>
 				<tr>
 					<td width="10%"><img src="{$url}application/images/icons/shield.png" /></td>
@@ -28,49 +29,41 @@
 				</tr>
 			</table>
 		</aside>
+
 		<aside>
 			<table width="100%">
 				<tr>
 					<td width="10%"><img src="{$url}application/images/icons/user.png" /></td>
-					<td width="40%">{lang("nickname", "ucp")} :</td>
+					<td width="40%">{lang("nickname", "ucp")}</td>
 					<td width="50%">
-				
-					{$username}
+						<a href="{$url}ucp/settings" data-tip="{lang("change_nickname", "ucp")}" style="float:left;margin-left:10px;"><img src="{$url}application/images/icons/pencil.png" align="absbottom" /></a>
+						<a href="profile/{$id}" data-tip="View profile">{$username}</a>
 					</td>
 				</tr>
 				<tr>
 					<td width="10%"><img src="{$url}application/images/icons/world.png" /></td>
-					<td width="40%">  شماره ملی :</td>
-					<td width="50%">{$codemeli}
-			
+					<td width="40%">{lang("location", "ucp")}</td>
+					<td width="50%">
+						<a href="{$url}ucp/settings" data-tip="{lang("change_location", "ucp")}" style="float:left;margin-left:10px;"><img src="{$url}application/images/icons/pencil.png" align="absbottom" /></a>
+						{$location}
 					</td>
 				</tr>
-				<tr>
-					<td width="10%"><img src="{$url}application/images/icons/telephone.png" /></td>
-					<td width="40%"> شماره همراه :</td>
-					<td width="50%">{$location}
-			
-					</td>
-				</tr>
-				
 				<tr>
 					<td width="10%"><img src="{$url}application/images/icons/plugin.png" /></td>
-					<td width="40%">نوع اکانت :</td>
+					<td width="40%">{lang("expansion", "ucp")}</td>
 					<td width="50%">
-					<a href="{$url}ucp/expansion" data-tip="تغییر نوع اکانت" >{$expansion}</a>
+						<a href="{$url}ucp/expansion" data-tip="{lang("change_expansion", "ucp")}" style="float:left;margin-left:10px;"><img src="{$url}application/images/icons/cog.png" align="absbottom" /></a>
+						{$expansion}
 					</td>
 				</tr>
 				<tr>
 					<td width="10%"><img src="{$url}application/images/icons/award_star_bronze_1.png" /></td>
-					<td width="40%">{lang("account_rank", "ucp")} :</td>
+					<td width="40%">{lang("account_rank", "ucp")}</td>
 					<td width="50%">{foreach from=$groups item=group} <span {if $group.color}style="color:{$group.color}"{/if}>{$group.name}</span> {/foreach}</td>
 				</tr>
-                
 			</table>
-			
 		</aside>
 	</section>
-
 
 	<div class="clear"></div>	
 </section>

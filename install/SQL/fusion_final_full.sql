@@ -7,11 +7,12 @@ CREATE TABLE `account_data` (
   `id` int(11) NOT NULL,
   `vp` int(11) DEFAULT '0',
   `dp` int(11) DEFAULT '0',
+  `birthday` int(11) unsigned DEFAULT '0',
   `location` varchar(255) DEFAULT NULL,
+  `tell` varchar(50) DEFAULT '',
   `nickname` varchar(32) DEFAULT NULL,
-  `codemeli` varchar(255) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `family` varchar(255) DEFAULT NULL,
+  `secret_question` varchar(255) DEFAULT '',
+  `secret_answer` varchar(255) DEFAULT '',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
