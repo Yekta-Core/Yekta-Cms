@@ -1,5 +1,15 @@
 <?php
 
+/**
+ * @package   FusionCMS
+ * @version   6.x
+ * @author    A. Behnamfar <astrixoblix.b@gmail.com>
+ * @author    Nightprince <keramatjokar8855@gmail.com>
+ * @link      http://yekta-core.ir
+ * @link      http://poetrylabs.com
+ * @copyright (c) 2015 Poetrylabs web developing team
+ */
+
 class Register extends MX_Controller
 {
     private $usernameError;
@@ -20,8 +30,8 @@ class Register extends MX_Controller
 
         $this->load->model('activation_model');
 
-        $this->load->library('calendar');
-        $this->load->library('locations');
+        $this->load->library('date');
+        $this->load->library('location');
         $this->load->library('form_validation');
         $this->load->library('captcha', $this->config->item('use_captcha'));
 
@@ -66,10 +76,10 @@ class Register extends MX_Controller
                 'birthdaymonth', 'birthdayyear', 'location', 'secret_question', 'secret_answer');
 
             $data = array(
-                'days'                  => $this->calendar->getDays(),
-                'months'                => $this->calendar->getMonths(),
-                'years'                 => $this->calendar->getYears(),
-                'countries'             => $this->locations->getCountries(),
+                'days'                  => $this->date->getDays(),
+                'months'                => $this->date->getMonths(),
+                'years'                 => $this->date->getYears(),
+                'countries'             => $this->location->getCountries(),
                 'expansions'            => $this->realms->getExpansions(),
                 'secret_questions'      => $this->config->item('secret_questions'),
 
@@ -136,15 +146,15 @@ class Register extends MX_Controller
         {
             if(preg_match('%(\w+)-(\w+)%uiD', $this->input->post('register_location'), $matches))
             {
-                if(($matches[1] = $this->locations->getCountry($matches[1], true)) === false)
+                if(($matches[1] = $this->location->getCountry($matches[1], true)) === false)
                     die();
 
-                if(($matches[2] = $this->locations->getState($matches[1], $matches[2])) === false)
+                if(($matches[2] = $this->location->getState($matches[1], $matches[2])) === false)
                     die();
 
                 $_POST['register_location'] = $matches[1] . '-' . $matches[2];
             }
-            elseif(($_POST['register_location'] = $this->locations->getCountry($this->input->post('register_location'), true)) === false)
+            elseif(($_POST['register_location'] = $this->location->getCountry($this->input->post('register_location'), true)) === false)
                 die();
         }
 
@@ -160,13 +170,13 @@ class Register extends MX_Controller
         }
         else
         {
-            if(!$this->calendar->getDay($this->input->post('register_birthdayday')))
+            if(!$this->date->getDay($this->input->post('register_birthdayday')))
                 die();
 
-            if(!$this->calendar->getMonth($this->input->post('register_birthdaymonth')))
+            if(!$this->date->getMonth($this->input->post('register_birthdaymonth')))
                 die();
 
-            if(!$this->calendar->getYear($this->input->post('register_birthdayyear')))
+            if(!$this->date->getYear($this->input->post('register_birthdayyear')))
                 die();
 
             // Convert the given year, month and day to unix timestamp. it will able us to format the birthday

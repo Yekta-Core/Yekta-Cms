@@ -1,27 +1,27 @@
 <?php
 
-final class Calendar
+final class Date
 {
     private $days = array(
-        01, 02, 03, 04, 05, 06, 07, 08, 09, 10,
-        11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-        21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
-        31
+        '01', '02', '03', '04', '05', '06', '07', '08', '09', '10',
+        '11', '12', '13', '14', '15', '16', '17', '18', '19', '20',
+        '21', '22', '23', '24', '25', '26', '27', '28', '29', '30',
+        '31'
     );
 
     private $months = array(
-        01 => 'january',
-        02 => 'february',
-        03 => 'march',
-        04 => 'april',
-        05 => 'may',
-        06 => 'june',
-        07 => 'july',
-        08 => 'august',
-        09 => 'september',
-        10 => 'october',
-        11 => 'november',
-        12 => 'december'
+        '01' => 'january',
+        '02' => 'february',
+        '03' => 'march',
+        '04' => 'april',
+        '05' => 'may',
+        '06' => 'june',
+        '07' => 'july',
+        '08' => 'august',
+        '09' => 'september',
+        '10' => 'october',
+        '11' => 'november',
+        '12' => 'december'
     );
 
     final public function getDays()
@@ -50,7 +50,7 @@ final class Calendar
         if(!is_numeric($month))
             return false;
 
-        if(!isset($this->months[$month]))
+        if(!in_array($month, array_keys($this->months)))
             return false;
 
         return $this->months[$month];

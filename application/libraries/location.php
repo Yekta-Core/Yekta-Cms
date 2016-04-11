@@ -1,6 +1,6 @@
 <?php
 
-final class Locations
+final class Location
 {
     private $countries = array(
         'AF' => array(
