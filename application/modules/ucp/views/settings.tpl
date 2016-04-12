@@ -17,7 +17,7 @@
 		</tr>
 		{if $show_language_chooser}
 			<tr>
-				<td style="width:25% !important"><label for="language_field">Website language</label></td>
+				<td style="width:25% !important"><label for="language_field">{lang("website_lang", "ucp")}</label></td>
 				<td>
 					<select name="language_field" id="language_field">
 						{foreach from=$languages item=language}

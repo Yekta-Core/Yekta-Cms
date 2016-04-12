@@ -40,6 +40,7 @@ $lang['using_email'] = "با استفاده از ایمیل مقابل:";
 
 // Settings
 $lang['settings'] = "تنظیمات اکانت";
+$lang['website_lang'] = "زبان سایت";
 
 $lang['old_password'] = "کلمه عبور قدیم";
 $lang['new_password'] = "کلمه عبور جدید";
@@ -72,3 +73,4 @@ $lang['tbc'] = "The Burning Crusade";
 $lang['wotlk'] = "Wrath of The Lich King";
 $lang['cataclysm'] = "Cataclysm";
 $lang['mop'] = "Mists of Pandaria";
+$lang['mop'] = "Warlords of Draenor";
