@@ -16,13 +16,8 @@ $config['donation_currency_sign'] = " تومان";
 */
 
 $config['api'] = "gt25766g858";
-$config['callback'] = "http://epic-wow.ir/donate/jahanpayreturnback";
 
 $config['donate_jahanpay'] = array(
-'use' => true, // true: Feal | false: Gheir Faeal
-'postback_url' => "",
-'email' => "",
-'Mobile' => "",
 
 'values' => array(
 
@@ -46,12 +41,6 @@ $config['donate_jahanpay'] = array(
 | JahanPay Donation (www.jahanpay.com)
 |--------------------------------------------------------------------------
 */
-
-
-
-
-
-
 
 /*******************************************************************/
 /******************* Create By Yekta-CMS ***************************/

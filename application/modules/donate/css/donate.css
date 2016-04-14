@@ -9,17 +9,6 @@
 	margin-right:5px;
 }
 
-#donate_select {
-	text-align:left;
-	padding:10px;
-	margin-bottom:10px;
-	padding-top:0px;
-}
-
-#donate_select .nice_button {
-	margin-right:5px;
-}
-
 #donate form input[type="submit"] {
 	margin-top:15px;
 	margin-left:25px;

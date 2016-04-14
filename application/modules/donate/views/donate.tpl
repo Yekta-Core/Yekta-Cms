@@ -3,11 +3,8 @@
 		<section id="paypal_area" style="text-align:center" dir="rtl">
 		
 		<img src="{$url}application/modules/donate/img/jahanpay.png" /></td>
-			<form method="post" action="{$url}donate/jahanpay" class="page_form">
-				<input type="hidden" name="cmd" value="_xclick" />
+			<form method="post" action="{$url}donate/request" class="page_form">
 				<input type="hidden" name="item_name" value="{lang("donation_for", "donate")} {$server_name}" />
-				<input type="hidden" name="quantity" value="1" />
-				<input type="hidden" name="notify_url" value="{$donate_jahanpay.postback_url}" />
 				<input type="hidden" name="custom" value="{$user_id}" />
 				{foreach from=$donate_jahanpay.values item=value key=key}
 					<label for="option_{$key}">
