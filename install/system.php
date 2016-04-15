@@ -53,7 +53,7 @@ class Install
 
 		die("1");
 	}
-    
+
     private function checkPhpExtensions()
     {
         $req = array('mysqli', 'curl', 'openssl', 'soap', 'gd', 'mbstring', 'json');
@@ -66,7 +66,7 @@ class Install
         
         die( $errors ? join(', ', $errors) : '1' );
     }
-    
+
     private function checkApacheModules()
     {
         $req = array('mod_rewrite', 'mod_headers', 'mod_expires', 'mod_deflate');
@@ -79,12 +79,12 @@ class Install
         
         die( $errors ? join(', ', $errors) : '1' );
     }
-    
+
     private function checkPhpVersion()
     {
 		die( version_compare(PHP_VERSION, '5.3', '>=') ? '1' : '0' );
     }
-	
+
 	private function checkDbConnection()
 	{
 		$req = array('hostname', 'username', 'database');
@@ -134,7 +134,7 @@ class Install
 			$config->set($key, $value);
 		}
 
-		if(in_array($_POST['emulator'], array('arcemu', 'summitemu')))
+		if(in_array($_POST['emulator'], array('arcemu', 'summitemu', 'ascemu')))
 		{
 			switch($_POST['expansion'])
 			{
@@ -340,6 +340,10 @@ $db["account"]["stricton"] = FALSE;';
 			case "summitemu":
 				$this->SplitSQL("SQL/ranks_arcemu.sql");
 			break;
+ 
+            case "ascemu":
+                $this->SplitSQL("SQL/ranks_ascemu.sql");
+            break;
 
 			case "mangos_ra":
 			case "mangos_soap":
@@ -351,7 +355,7 @@ $db["account"]["stricton"] = FALSE;';
 
 		die('1');
 	}
-	
+
 	private function finalStep()
 	{
 		$file = fopen('.lock', 'w');
