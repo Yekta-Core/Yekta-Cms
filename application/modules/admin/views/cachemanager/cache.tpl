@@ -3,9 +3,9 @@
 	{
 		function checkIfLoaded()
 		{
-			if(typeof Cache != "undefined")
+			if(typeof Fusion_Cache != "undefined")
 			{
-				Cache.load();
+				Fusion_Cache.load();
 			}
 			else
 			{
@@ -29,10 +29,10 @@
 
 	{if hasPermission("emptyCache")}
 		<span>
-			<a class="nice_button" href="javascript:void(0)" onClick="Cache.clear('all_but_item')"><b>پاک کردن تمامی کش های آیتم ها</b></a>&nbsp;
-			<a class="nice_button" href="javascript:void(0)" onClick="Cache.clear('website')">پاک کردن تمامی کش سایت</a>&nbsp;
-			<a class="nice_button" href="javascript:void(0)" onClick="Cache.clear('message')">پاک کردن تمامی کش های پیام ها</a>&nbsp;
-			<a class="nice_button" href="javascript:void(0)" onClick="Cache.clear('all')">پاک کردن همه</a>
+			<a class="nice_button" href="javascript:void(0)" onClick="Fusion_Cache.clear('all_but_item')"><b>پاک کردن تمامی کش های آیتم ها</b></a>&nbsp;
+			<a class="nice_button" href="javascript:void(0)" onClick="Fusion_Cache.clear('website')">پاک کردن تمامی کش سایت</a>&nbsp;
+			<a class="nice_button" href="javascript:void(0)" onClick="Fusion_Cache.clear('message')">پاک کردن تمامی کش های پیام ها</a>&nbsp;
+			<a class="nice_button" href="javascript:void(0)" onClick="Fusion_Cache.clear('all')">پاک کردن همه</a>
 		</span>
 	{/if}
 </section>
