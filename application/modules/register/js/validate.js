@@ -160,49 +160,4 @@ var Validate = {
 			this.valid(field_name);
 		}
 	},
-
-	/**
-	 * Validate Tell Number
-	 */
-	checkTell: function()
-	{
-		var field_name = "#register_tell",
-			field = $(field_name),
-			value = field.val();
-
-		// Length check
-		if(value.length < 11 || value.length > 11)
-		{
-			this.invalid(field_name, lang("err_phone_length", "register"));
-		}
-		// Numeric check
-		else if (!value.match(/^\d+$/))
-		{
-			this.invalid(field_name, lang("err_phone_invalid", "register"));
-		}
-		else
-		{
-			this.valid(field_name);
-		}
-	},
-
-	/**
-	 * Validate Question
-	 */
-	checkQuest: function()
-	{
-		var field_name = "#register_answer",
-			field = $(field_name),
-			value = field.val();
-
-		// Length check
-		if(value.length < 2)
-		{
-			this.invalid(field_name, lang("err_secret_answer_length", "register"));
-		}
-		else
-		{
-			this.valid(field_name);
-		}
-	},
 }

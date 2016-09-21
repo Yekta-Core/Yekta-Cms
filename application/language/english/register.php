@@ -35,27 +35,3 @@ $lang['password'] = "Password";
 $lang['confirm'] = "Confirm password";
 $lang['expansion'] = "Expansion";
 $lang['submit'] = "Create account!";
-
-// Custom fields' strings
-$lang['location'] = "Location (country/state)";
-$lang['birthday'] = "Birthday";
-$lang['secret_question'] = "Secret Question";
-$lang['secret_answer'] = "Secret Answer";
-$lang['tell_number'] = "Phone number";
-
-$lang['msg_select_option'] = "Please select an option";
-$lang['err_phone_invalid'] = "Entered phone number doesn't have a valid pattern";
-$lang['err_phone_length'] = "Phone number must at least have 11 characters";
-$lang['err_secret_answer_length'] = "Secret answer must at least have 2 characters long";
-
-// Security questions strings
-$lang['question_1'] = "In what city were you born?";
-$lang['question_2'] = "In what year was your mother born?";
-$lang['question_3'] = "In what year was your father born?";
-$lang['question_4'] = "What is your pet’s name?";
-$lang['question_5'] = "What was your first car?";
-$lang['question_6'] = "What is your favorite?";
-$lang['question_7'] = "What was your first WoW character name?";
-$lang['question_8'] = "What was your best friend in high school?";
-$lang['question_9'] = "What was the name of your first childhood friend?";
-$lang['question_10'] = "What was the name of your elementary / primary school?";

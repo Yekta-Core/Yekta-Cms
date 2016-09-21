@@ -15,18 +15,14 @@
 // UCP
 $lang['user_panel'] = "پنل کاربران";
 $lang['change_avatar'] = "تغییر آواتار";
-$lang['nickname'] = "نام";
-$lang['change_nickname'] = "تغییر نام";
-$lang['location'] = "محل زندگی";
-$lang['change_location'] = "تغییر محل زندگی";
+$lang['nickname'] = "نام مستعار";
+$lang['location'] = "تلفن تماس";
 $lang['expansion'] = "پچ";
 $lang['account_rank'] = "رنک اکانت";
-$lang['voting_points'] = "امتیاز";
-$lang['donation_points'] = "دونیت پوینت";
+$lang['voting_points'] = "پوینت رای دهی";
+$lang['donation_points'] = "پوینت دونیت";
 $lang['account_status'] = "وضعیت اکانت";
 $lang['member_since'] = "عضو شده از";
-$lang['data_tip_vote'] = "قابل دریافت میباشد Vote مجموعه امتیاز شما, امتیاز گیری رایگان بوده و از طریق سیستم";
-$lang['data_tip_donate'] = "اعتبار, موجودی تومانی شما میباشد که به شما این امکان را میدهد تا از امکانات پولی سایت استفاده کنید";
 
 // Avatar
 $lang['change_avatar'] = "تغییر آواتار";
@@ -42,11 +38,6 @@ $lang['using_email'] = "با استفاده از ایمیل مقابل:";
 $lang['settings'] = "تنظیمات اکانت";
 $lang['website_lang'] = "زبان سایت";
 
-$lang['old_password'] = "کلمه عبور قدیم";
-$lang['new_password'] = "کلمه عبور جدید";
-$lang['new_password_confirm'] = "تکرار کلمه عبور";
-$lang['new_password_submit'] = "تغییر رمز عبور";
-
 $lang['nickname_error'] = "نام مستعار باید بین 4 الی 14 کاراکتر باشد و می تواند حروف الفبا و اعداد را شامل شود";
 $lang['location_error'] = "مکان میتواند از 4 الی 32 حرف را حمل کند و باید از حروف الفبا استفاده شود";
 $lang['pw_doesnt_match'] = "رمز های عبور یکسان نیستند!";
@@ -54,8 +45,6 @@ $lang['changes_saved'] = "تغییرات اعمال شده ذخیره گردید
 $lang['invalid_pw'] = "زمر عبور نادرست است!";
 $lang['nickname_taken'] = "این نام مستعار قبلا انتخاب شده است";
 $lang['invalid_language'] = "زبان نا معتبر می باشد";
-
-$lang['change_information'] = "تغییر اطلاعات";
 
 // Change expansion
 $lang['change_expansion'] = "تغییر پچ";

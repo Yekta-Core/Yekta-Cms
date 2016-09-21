@@ -35,27 +35,3 @@ $lang['password'] = "رمز عبور";
 $lang['confirm'] = "تکرار رمز عبور";
 $lang['expansion'] = "پچ";
 $lang['submit'] = "ساخت اکانت!";
-
-// Custom fields' strings
-$lang['location'] = "محل زندگی (کشور / استان)";
-$lang['birthday'] = "تاریخ تولد";
-$lang['secret_question'] = "سوال امنیتی";
-$lang['secret_answer'] = "پاسخ سوال";
-$lang['tell_number'] = "شماره همراه";
-
-$lang['msg_select_option'] = "لطفا یک گزینه را انتخاب کنید";
-$lang['err_phone_invalid'] = "شماره تلفن وارد شده معتبر نیست";
-$lang['err_phone_length'] = "شماره تلفن باید حداقل 11 کاراکتر باشد";
-$lang['err_secret_answer_length'] = "پاسخ سوال باید بیشتر از 2 حرف باشد";
-
-// Security questions strings
-$lang['question_1'] = "در چه شهری متولد شده اید؟";
-$lang['question_2'] = "مادر شما متولد چه سالی است؟";
-$lang['question_3'] = "پدر شما متولد چه سالی است؟";
-$lang['question_4'] = "نام حیوان خانگی شما چیست؟";
-$lang['question_5'] = "اولین ماشین شما چه بود؟";
-$lang['question_6'] = "آن چه که مورد علاقه شما می باشد";
-$lang['question_7'] = "نام اولین هیرو شما در بازی وو چه بود؟";
-$lang['question_8'] = "بهترین دوست شما در دبیرستان چه کسی بود؟";
-$lang['question_9'] = "نام اولین دوست دوران کودکی شما چه بود؟";
-$lang['question_10'] = "نام مدرسه ابتدایی شما چه بود؟";
