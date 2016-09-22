@@ -1,7 +1,7 @@
 {form_open('register', 'class="page_form"')}
 	<table style="width:80%">
 		<tr>
-			<td ><label for="register_username">{lang("username", "register")}</label></td>
+			<td><label for="register_username">{lang("username", "register")}</label></td>
 			<td>
 				<input type="text" name="register_username" id="register_username" value="{set_value('register_username')}" onChange="Validate.checkUsername()"/>
 				<span id="username_error">{$username_error}</span>
@@ -49,7 +49,6 @@
 				</td>
 			</tr>
 		{/if}
-		<input type="hidden" name="r" value="{$recruiter}"/>
 	</table>
 	<center style="margin-bottom:10px;">
 		<input type="submit" name="login_submit" value="{lang("submit", "register")}" />

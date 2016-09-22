@@ -2,7 +2,7 @@
 
 class Activation_model extends CI_Model
 {
-	public function add($username, $password, $email, $expansion, $recruiter)
+	public function add($username, $password, $email, $expansion)
 	{
 		$data = array(
 			'username' => $username,
@@ -10,9 +10,8 @@ class Activation_model extends CI_Model
 			'password' =>  $this->user->createHash($username, $password),
 			'expansion' => $expansion,
 			'timestamp' => time(),
-			'ip' => $_SERVER['REMOTE_ADDR'],
-			'key' => sha1($username.$email.$password.time()),
-			'recruiter' => $recruiter
+			'ip' => $this->input->ip_address(),
+			'key' => sha1($username.$email.$password.time())
 		);
 
 		$this->db->insert("pending_accounts", $data);

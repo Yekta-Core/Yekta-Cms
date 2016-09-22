@@ -5,15 +5,8 @@
 			<td><input type="text" name="nickname_field" id="nickname_field" value="{$nickname}"/></td>
 		</tr>
 		<tr>
-			<td><label for="location_field">{lang("location", "register")}</label></td>
-			<td>
-				<select name="location_field" class="country-select" id="location_field">
-					<option disabled>{lang("msg_select_option", "register")}</option>
-					{foreach from=$countries key=country item=data}
-						<option value="{$country}" {set_select('register_location', $country)}>{$data.name}</option>
-					{/foreach}
-				</select>
-			</td>
+			<td style="width:25% !important"><label for="location_field">{lang("location", "ucp")}</label></td>
+			<td><input type="text" name="location_field" id="location_field" value="{$location}"/></td>
 		</tr>
 		{if $show_language_chooser}
 			<tr>

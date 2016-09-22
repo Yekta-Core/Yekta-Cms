@@ -8,7 +8,6 @@ class Settings extends MX_Controller
 		parent::__construct();
 
 		$this->load->config('settings');
-        $this->load->library('location');
 
 		//Make sure that we are logged in
 		$this->user->userArea();
@@ -30,7 +29,7 @@ class Settings extends MX_Controller
 
 		$settings_data = array(
 			'nickname' => $this->user->getNickname(),
-            'countries' => $this->location->getCountries(),
+			'location' => $this->internal_user_model->getLocation(),
 			'show_language_chooser' => $this->config->item('show_language_chooser'),
 			'userLanguage' => $this->language->getLanguage()
 		);
