@@ -27,7 +27,9 @@ class Skyfire_rbac_mop_soap implements Emulator
 	 * Array of expansion ids and their corresponding names
 	 */
 	protected $expansions = array(
-		4 => "Mists Of Pandaria",
+		6 => "Legion",
+		5 => "Warlords of Draenor",
+		4 => "Mists of Pandaria",
 		3 => "Cataclysm",
 		2 => "WotLK",
 		1 => "TBC",
