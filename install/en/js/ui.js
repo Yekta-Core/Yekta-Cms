@@ -360,7 +360,7 @@ var UI = {
                            onComplete();
 					});
 				});
-			}
+			};
 			
 			// validate current step (only if moving forward)
 			var validation = $('.step:eq(' + (UI.Navigation.current - 1) + ')').attr('data-validation');
@@ -466,4 +466,4 @@ var UI = {
 			$("#tooltip").html(data).show();
 		}
 	}
-}
+};

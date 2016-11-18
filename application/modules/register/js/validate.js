@@ -160,4 +160,4 @@ var Validate = {
 			this.valid(field_name);
 		}
 	},
-}
+};

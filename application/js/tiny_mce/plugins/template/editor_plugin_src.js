@@ -81,9 +81,8 @@
 
 			function hasClass(n, c) {
 				return new RegExp('\\b' + c + '\\b', 'g').test(n.className);
-			};
-
-			each(dom.select('*', el), function(n) {
+            }
+            each(dom.select('*', el), function(n) {
 				// Replace cdate
 				if (hasClass(n, ed.getParam('template_cdate_classes', 'cdate').replace(/\s+/g, '|')))
 					n.innerHTML = t._getDateTime(new Date(), ed.getParam("template_cdate_format", ed.getLang("template.cdate_format")));

@@ -179,4 +179,4 @@ var Changelog = {
 			$.post(Config.URL + Changelog.Links.saveCategory + id, {csrf_token_name:Config.CSRF, typeName:name});
 		});
 	}
-}
+};

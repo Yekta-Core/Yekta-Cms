@@ -126,4 +126,4 @@ var CharacterTools = {
 			});
 		}
 	}
-}
+};

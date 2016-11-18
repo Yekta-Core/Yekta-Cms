@@ -84,9 +84,8 @@
 					Event.remove(ed.getDoc(), 'click', hideMenu);
 					t._menu = null;
 				}
-			};
-
-			ed.onMouseDown.add(hide);
+            }
+            ed.onMouseDown.add(hide);
 			ed.onKeyDown.add(hide);
 			ed.onKeyDown.add(function(ed, e) {
 				if (e.shiftKey && !e.ctrlKey && !e.altKey && e.keyCode === 121) {

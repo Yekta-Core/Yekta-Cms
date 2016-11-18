@@ -17,7 +17,7 @@ var Vote = {
 			});
 		}
 	}
-}
+};
 
 $(document).ready(function()
 {

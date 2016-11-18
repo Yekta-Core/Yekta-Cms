@@ -367,4 +367,4 @@ var Settings = {
 			break;
 		}
 	}
-}
+};

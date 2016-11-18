@@ -30,9 +30,8 @@
 				});
 
 				return formats;
-			};
-
-			// Setup number formats from config or default
+            }
+            // Setup number formats from config or default
 			t.numlist = ed.getParam("advlist_number_styles") || buildFormats("default,lower-alpha,lower-greek,lower-roman,upper-alpha,upper-roman");
 			t.bullist = ed.getParam("advlist_bullet_styles") || buildFormats("default,circle,disc,square");
 
@@ -60,9 +59,8 @@
 					});
 
 					return state;
-				};
-
-				function applyListFormat() {
+                }
+                function applyListFormat() {
 					var list, dom = editor.dom, sel = editor.selection;
 
 					// Check for existing list element
@@ -82,9 +80,8 @@
 					}
 
 					editor.focus();
-				};
-
-				btn = cm.createSplitButton(name, {
+                }
+                btn = cm.createSplitButton(name, {
 					title : 'advanced.' + name + '_desc',
 					'class' : 'mce_' + name,
 					onclick : function() {

@@ -103,11 +103,11 @@ var CharacterTransfer = {
 				{
 					CharacterTransfer.RedirectToSuccess();
 				}
-				return;
+
 			}, 
 			"html"
 		);
 		
 		return true;
 	}
-}
+};

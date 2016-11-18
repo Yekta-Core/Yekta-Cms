@@ -132,4 +132,4 @@ var Create = {
 			$("#" + error + "_error").html('<img src="' + Config.URL + 'application/images/icons/accept.png"/>');
 		}
 	}
-}
+};

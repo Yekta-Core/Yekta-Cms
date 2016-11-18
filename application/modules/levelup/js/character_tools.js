@@ -125,4 +125,4 @@ setTimeout ( "redirect('levelup')", 5000 );
 			});
 		}
 	}
-}
+};

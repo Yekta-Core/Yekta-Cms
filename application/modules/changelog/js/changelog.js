@@ -92,4 +92,4 @@ var Changelog = {
 
 		return year + "/" + month + "/" + day;
 	}
-}
+};

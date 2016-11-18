@@ -100,4 +100,4 @@ var Poll = {
 
 		$("#answer_fields").append('<input type="text" name="answer_' + id + '" id="answer_' + id + '" placeholder="Answer ' + id + '"/>');
 	}
-}
+};

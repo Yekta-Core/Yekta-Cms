@@ -208,4 +208,4 @@ var Auctionhouse = {
 		
 		return false;
 	}
-}
+};

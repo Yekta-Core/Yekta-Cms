@@ -27,9 +27,8 @@
 					search_string : ed.selection.getContent({format : 'text'}),
 					plugin_url : url
 				});
-			};
-
-			// Register commands
+            }
+            // Register commands
 			ed.addCommand('mceSearch', function() {
 				open('search');
 			});

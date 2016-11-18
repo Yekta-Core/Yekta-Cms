@@ -126,4 +126,4 @@ var Roles = {
 			eval(data);
 		});
 	}
-}
+};

@@ -33,7 +33,7 @@ function UI()
 
 		// Enable tooltip
 		Tooltip.initialize();
-	}
+	};
 
 	/**
 	 * Display the vote reminder popup
@@ -49,7 +49,7 @@ function UI()
 		{
 			UI.hidePopup();
 		});
-	}
+	};
 
 	/**
 	 * Initialize the image slider
@@ -69,7 +69,7 @@ function UI()
 		}
 
 		window.myFlux = new flux.slider('#slider', config);
-	}
+	};
 
 	/**
 	 * Shows an alert box
@@ -121,7 +121,7 @@ function UI()
 				UI.hidePopup();
 			}
 		});
-	}
+	};
 
 	/**
 	 * Shows a confirm box
@@ -180,7 +180,7 @@ function UI()
 				UI.hidePopup();
 			}
 		});
-	}
+	};
 
 	/**
 	 * Hides the current popup box
@@ -197,7 +197,7 @@ function UI()
 		$("#confirm_button").unbind('click');
 		$("#alert_button").unbind('click');
 		$(document).unbind('keypress');
-	}
+	};
 
 	/**
 	 * Display the amount of remaining characters
@@ -212,7 +212,7 @@ function UI()
 
 		// Change the indicator
 		document.getElementById(indicator).innerHTML = length + " / " + max;
-	}
+	};
 	
 	/**
 	 * Creates a expandable box
@@ -260,7 +260,7 @@ function Tooltip()
 
 		// Add mouse-over event listeners
 		this.addEvents();
-	}
+	};
 
 	/**
 	 * Used to support Ajax content
@@ -273,7 +273,7 @@ function Tooltip()
 
 		// Re-add
 		this.addEvents();
-	}
+	};
 	
 	/**
 	 * Adds mouseover events to all elements
@@ -284,7 +284,7 @@ function Tooltip()
 		Tooltip.addEvents.handleMouseMove = function(e)
 		{
 			Tooltip.move(e.pageX, e.pageY);
-		}
+		};
 		
 		// Add mouse-over event listeners
 		$("[data-tip]").hover(
@@ -321,7 +321,7 @@ function Tooltip()
 				}
 			);
 		}
-	}
+	};
 
 	/**
 	 * Moves tooltip
@@ -335,7 +335,7 @@ function Tooltip()
 
 		// Position it at the mouse, and center
 		$("#tooltip").css("left", x - width).css("top", y + 25);
-	}
+	};
 
 	/**
 	 * Displays the tooltip
@@ -344,7 +344,7 @@ function Tooltip()
 	this.show = function(data)
 	{
 		$("#tooltip").html(data).show();
-	}
+	};
 
 	/**
 	 * Item tooltip object
@@ -359,7 +359,7 @@ function Tooltip()
 	 	/**
 	 	 * Runtime cache
 	 	 */
-	 	this.cache = new Array();
+	 	this.cache = [];
 
 	 	/**
 	 	 * The currently displayed item ID
@@ -408,7 +408,7 @@ function Tooltip()
 			 		});
 			 	}
 		 	}
-	 	}
+	 	};
 
 	 	this.CacheObj = new function()
 	 	{
@@ -446,7 +446,7 @@ function Tooltip()
 		 		{
 		 			return false;
 		 		}
-	 		}
+	 		};
 
 	 		/**
 	 		 * Save data to localStorage

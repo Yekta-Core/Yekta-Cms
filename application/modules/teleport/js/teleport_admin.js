@@ -192,4 +192,4 @@ var Teleport = {
 			break;
 		}
 	}
-}
+};

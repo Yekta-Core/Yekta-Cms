@@ -66,9 +66,8 @@
 					if (tinymce.isWebKit && deltaSize < 0)
 						resize();
 				}
-			};
-
-			t.editor = ed;
+            }
+            t.editor = ed;
 
 			// Define minimum height
 			t.autoresize_min_height = parseInt(ed.getParam('autoresize_min_height', ed.getElement().offsetHeight));

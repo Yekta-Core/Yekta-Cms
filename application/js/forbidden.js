@@ -62,7 +62,7 @@ function universalPreloader(){
 		this.css("top", (($(window).height() - this.outerHeight()) / 2) + "px");
 		this.css("left", (($(window).width() - this.outerWidth()) / 2) + "px");
 		return this;
-	}
+	};
 
 	//center to the screen
 	pre.center();

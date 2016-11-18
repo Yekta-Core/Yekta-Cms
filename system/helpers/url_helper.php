@@ -342,7 +342,7 @@ if ( ! function_exists('safe_mailto'))
 
 	?><script type="text/javascript">
 	//<![CDATA[
-	var l=new Array();
+	var l=[];
 	<?php
 	$i = 0;
 	foreach ($x as $val){ ?>l[<?php echo $i++; ?>]='<?php echo $val; ?>';<?php } ?>

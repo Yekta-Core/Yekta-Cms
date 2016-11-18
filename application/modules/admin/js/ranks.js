@@ -134,4 +134,4 @@ var Ranks = {
 			eval(data);
 		});
 	}
-}
+};

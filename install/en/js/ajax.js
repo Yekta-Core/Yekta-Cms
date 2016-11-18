@@ -312,7 +312,7 @@ var Ajax = {
 			var data = {
 				realms: JSON.stringify(Ajax.Realms.data),
 				emulator: $("#emulator").val()
-			}
+			};
 
 			$.post("system.php?step=realms", data, function(res)
 			{
@@ -334,7 +334,7 @@ var Ajax = {
 
 			var data = {
 				emulator: $("#emulator").val()
-			}
+			};
 
 			$.post("system.php?step=ranks", data, function(res)
 			{
@@ -350,4 +350,4 @@ var Ajax = {
 			});
 		}
 	}
-}
+};

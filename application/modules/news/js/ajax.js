@@ -34,7 +34,7 @@ function Ajax()
 		else
 		{
 			// Set loading image
-			element.html(Ajax.loaderHTML)
+			element.html(Ajax.loaderHTML);
 
 			// Show loading image
 			element.slideDown(200, function()
@@ -54,7 +54,7 @@ function Ajax()
 				});
 			});
 		}
-	}
+	};
 
 	/**
 	 * Submit a news comment
@@ -86,7 +86,7 @@ function Ajax()
 				$("#comment_button_" + id).removeAttr("disabled", "disabled");
 
 				var button = $("#comments_button_" + id);
-				var count = button.html().replace(/[^0-9.]/, "")
+				var count = button.html().replace(/[^0-9.]/, "");
 				Ajax.commentCount++;
 
 				$("#comments_area_" + id).prepend('<div id="my_comment_' + Ajax.commentCount + '" style="display:none;"></div>');
@@ -97,7 +97,7 @@ function Ajax()
 		{
 			UI.alert("The message must be between 0-255 characters long!")
 		}
-	}
+	};
 
 	this.remove = function(field, id)
 	{
