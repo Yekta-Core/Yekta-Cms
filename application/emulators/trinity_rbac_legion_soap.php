@@ -157,7 +157,7 @@ class Trinity_rbac_legion_soap implements Emulator
 			"guid" => "guid",
 			"note" => "note",
 			"createTime" => "createTime",
-			"completed" => "completed",
+			"assignedTo" => "assignedTo",
 			"closedBy" => "closedBy"
 		)
 	);
