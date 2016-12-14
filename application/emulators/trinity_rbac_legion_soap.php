@@ -153,7 +153,7 @@ class Trinity_rbac_legion_soap implements Emulator
 		),
 
 		"gm_tickets" => array(
-			"ticketId" => "ticketId",
+			"id" => "id",
 			"guid" => "guid",
 			"message" => "message",
 			"createTime" => "createTime",
