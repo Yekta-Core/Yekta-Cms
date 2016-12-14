@@ -48,7 +48,7 @@ class Trinity_rbac_legion_soap implements Emulator
 		"character_stats" => "character_stats",
 		"guild_member" => "guild_member",
 		"guild" => "guild",
-		"gm_tickets" => "gm_tickets"
+		"gm_bug" => "gm_bug"
 	);
 
 	/**
