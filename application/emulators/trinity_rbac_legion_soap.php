@@ -85,7 +85,7 @@ class Trinity_rbac_legion_soap implements Emulator
 		),
 
 		"characters" => array(
-			"guid" => "guid",
+			"playerGuid" => "playerGuid",
 			"account" => "account",
 			"name" => "name",
 			"race" => "race",
