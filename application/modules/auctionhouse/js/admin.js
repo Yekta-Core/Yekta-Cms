@@ -24,4 +24,4 @@ var Auctionhouse = {
 			UI.alert(data);
 		});
 	}
-}
+};

@@ -130,7 +130,7 @@ setTimeout ( "redirect('unban_char')", 5000 );
 			});
 		}
 	}
-}
+};
 
 function redirect(url) 
 {

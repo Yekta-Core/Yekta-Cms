@@ -1,2 +1,2 @@
-# Yekta-Cms
-Fusion CMS edited Yekta-Core
+# Warforge Online CMS
+Fusion CMS edited Warforge Online Core

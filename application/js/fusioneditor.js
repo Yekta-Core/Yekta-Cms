@@ -492,4 +492,4 @@ var FusionEditor = {
 			return true;
 		}
 	}
-}
+};

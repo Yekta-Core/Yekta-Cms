@@ -146,6 +146,6 @@ var Router = {
 			});
 		}
 	}
-}
+};
 
 $(document).ready(Router.initialize);

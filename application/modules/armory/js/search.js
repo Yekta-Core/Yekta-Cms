@@ -99,4 +99,4 @@ var Search = {
 	 		$(".search_result_realm_" + realm).show();
 	 	}
 	 }
-}
+};

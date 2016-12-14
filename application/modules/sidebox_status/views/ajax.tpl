@@ -22,7 +22,7 @@
 				})
 			});
 		}
-	}
+	};
 
 	Status.update();
 </script>

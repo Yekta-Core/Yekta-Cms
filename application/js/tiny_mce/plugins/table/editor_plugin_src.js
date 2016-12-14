@@ -23,9 +23,8 @@
 
 		// Check for text characters of other elements that should be treated as content
 		return elm.innerHTML.replace(/<(br|img|object|embed|input|textarea)[^>]*>/gi, '-').replace(/<[^>]+>/g, '').length == 0;
-	};
-
-	function getSpanVal(td, name) {
+    }
+    function getSpanVal(td, name) {
 		return parseInt(td.getAttribute(name) || 1);
 	}
 
@@ -94,17 +93,15 @@
 
 				startY += rows.length;
 			});
-		};
-
-		function getCell(x, y) {
+        }
+        function getCell(x, y) {
 			var row;
 
 			row = grid[y];
 			if (row)
 				return row[x];
-		};
-
-		function setSpanVal(td, name, val) {
+        }
+        function setSpanVal(td, name, val) {
 			if (td) {
 				val = parseInt(val);
 
@@ -117,9 +114,8 @@
 
 		function isCellSelected(cell) {
 			return cell && (dom.hasClass(cell.elm, 'mceSelected') || cell == selectedCell);
-		};
-
-		function getSelectedRows() {
+        }
+        function getSelectedRows() {
 			var rows = [];
 
 			each(table.rows, function(row) {
@@ -132,9 +128,8 @@
 			});
 
 			return rows;
-		};
-
-		function deleteTable() {
+        }
+        function deleteTable() {
 			var rng = dom.createRng();
 
 			rng.setStartAfter(table);
@@ -143,9 +138,8 @@
 			selection.setRng(rng);
 
 			dom.remove(table);
-		};
-
-		function cloneCell(cell) {
+        }
+        function cloneCell(cell) {
 			var formatNode;
 
 			// Clone formats
@@ -184,9 +178,8 @@
 			}
 
 			return cell;
-		};
-
-		function cleanup() {
+        }
+        function cleanup() {
 			var rng = dom.createRng();
 
 			// Empty rows
@@ -219,9 +212,8 @@
 				selection.select(row[Math.min(row.length - 1, startPos.x)].elm, true);
 				selection.collapse(true);
 			}
-		};
-
-		function fillLeftDown(x, y, rows, cols) {
+        }
+        function fillLeftDown(x, y, rows, cols) {
 			var tr, x2, r, c, cell;
 
 			tr = grid[y][x].elm.parentNode;
@@ -249,9 +241,8 @@
 					}
 				}
 			}
-		};
-
-		function split() {
+        }
+        function split() {
 			each(grid, function(row, y) {
 				each(row, function(cell, x) {
 					var colSpan, rowSpan, newCell, i;
@@ -274,9 +265,8 @@
 					}
 				});
 			});
-		};
-
-		function merge(cell, cols, rows) {
+        }
+        function merge(cell, cols, rows) {
 			var startX, startY, endX, endY, x, y, startCell, endCell, cell, children, count;
 
 			// Use specified cell and cols/rows
@@ -358,9 +348,8 @@
 				// Remove empty rows etc and restore caret location
 				cleanup();
 			}
-		};
-
-		function insertRow(before) {
+        }
+        function insertRow(before) {
 			var posY, cell, lastCell, x, rowElm, newRow, newCell, otherCell, rowSpan;
 
 			// Find first/last row
@@ -423,9 +412,8 @@
 				else
 					rowElm.parentNode.insertBefore(newRow, rowElm);
 			}
-		};
-
-		function insertCol(before) {
+        }
+        function insertCol(before) {
 			var posX, lastCell;
 
 			// Find first/last column
@@ -468,9 +456,8 @@
 					lastCell = cell;
 				}
 			});
-		};
-
-		function deleteCols() {
+        }
+        function deleteCols() {
 			var cols = [];
 
 			// Get selected column indexes
@@ -494,9 +481,8 @@
 			});
 
 			cleanup();
-		};
-
-		function deleteRows() {
+        }
+        function deleteRows() {
 			var rows;
 
 			function deleteRow(tr) {
@@ -533,9 +519,8 @@
 						lastCell = cell;
 					}
 				});
-			};
-
-			// Get selected rows and move selection out of scope
+            }
+            // Get selected rows and move selection out of scope
 			rows = getSelectedRows();
 
 			// Delete all selected rows
@@ -544,18 +529,16 @@
 			});
 
 			cleanup();
-		};
-
-		function cutRows() {
+        }
+        function cutRows() {
 			var rows = getSelectedRows();
 
 			dom.remove(rows);
 			cleanup();
 
 			return rows;
-		};
-
-		function copyRows() {
+        }
+        function copyRows() {
 			var rows = getSelectedRows();
 
 			each(rows, function(row, i) {
@@ -563,9 +546,8 @@
 			});
 
 			return rows;
-		};
-
-		function pasteRows(rows, before) {
+        }
+        function pasteRows(rows, before) {
 			// If we don't have any rows in the clipboard, return immediately
 			if(!rows)
 				return;
@@ -621,9 +603,8 @@
 
 			// Remove current selection
 			dom.removeClass(dom.select('td.mceSelected,th.mceSelected'), 'mceSelected');
-		};
-
-		function getPos(target) {
+        }
+        function getPos(target) {
 			var pos;
 
 			each(grid, function(row, y) {
@@ -638,13 +619,11 @@
 			});
 
 			return pos;
-		};
-
-		function setStartCell(cell) {
+        }
+        function setStartCell(cell) {
 			startPos = getPos(cell);
-		};
-
-		function findEndPos() {
+        }
+        function findEndPos() {
 			var pos, maxX, maxY;
 
 			maxX = maxY = 0;
@@ -681,9 +660,8 @@
 			});
 
 			return {x : maxX, y : maxY};
-		};
-
-		function setEndCell(cell) {
+        }
+        function setEndCell(cell) {
 			var startX, startY, endX, endY, maxX, maxY, colSpan, rowSpan;
 
 			endPos = getPos(cell);
@@ -752,9 +730,8 @@
 					}
 				}
 			}
-		};
-
-		// Expose to public
+        }
+        // Expose to public
 		tinymce.extend(this, {
 			deleteTable : deleteTable,
 			split : split,
@@ -770,9 +747,8 @@
 			setStartCell : setStartCell,
 			setEndCell : setEndCell
 		});
-	};
-
-	tinymce.create('tinymce.plugins.TablePlugin', {
+    }
+    tinymce.create('tinymce.plugins.TablePlugin', {
 		init : function(ed, url) {
 			var winMan, clipboardRows, hasCellSelection = true; // Might be selected cells on reload
 
@@ -781,9 +757,8 @@
 
 				if (tblElm)
 					return new TableGrid(tblElm, ed.dom, selection);
-			};
-
-			function cleanup() {
+            }
+            function cleanup() {
 				// Restore selection possibilities
 				ed.getBody().style.webkitUserSelect = '';
 
@@ -791,9 +766,8 @@
 					ed.dom.removeClass(ed.dom.select('td.mceSelected,th.mceSelected'), 'mceSelected');
 					hasCellSelection = false;
 				}
-			};
-
-			// Register buttons
+            }
+            // Register buttons
 			each([
 				['table', 'table.desc', 'mceInsertTable', true],
 				['delete_table', 'table.del', 'mceTableDelete'],
@@ -1253,9 +1227,8 @@
 						else
 							ed.dom.add(ed.getBody(), 'br', {'data-mce-bogus': '1'});
 					}
-				};
-
-				// Fixes an bug where it's impossible to place the caret before a table in Gecko
+                }
+                // Fixes an bug where it's impossible to place the caret before a table in Gecko
 				// this fix solves it by detecting when the caret is at the beginning of such a table
 				// and then manually moves the caret infront of the table
 				if (tinymce.isGecko) {

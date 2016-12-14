@@ -101,7 +101,7 @@ var Admin = {
 			}
 		});
 	}
-}
+};
 
 
 $(document).ready(function()

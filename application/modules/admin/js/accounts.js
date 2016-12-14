@@ -91,4 +91,4 @@ var Accounts = {
 			arrow.css("-ms-transform", "rotate(0deg)");
 		}
 	}
-}
+};

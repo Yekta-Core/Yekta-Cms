@@ -170,4 +170,4 @@ var Sidebox = {
 			$("#custom_field").fadeOut(150);
 		}
 	}
-}
+};

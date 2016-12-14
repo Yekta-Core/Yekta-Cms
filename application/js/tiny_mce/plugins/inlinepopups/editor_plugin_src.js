@@ -427,9 +427,8 @@
 				sy = cp.y + p.y - vp.y;
 				DOM.add(eb.get(), 'div', {id : 'mcePlaceHolder', 'class' : 'mcePlaceHolder', style : {left : sx, top : sy, width : sz.w, height : sz.h}});
 				ph = new Element('mcePlaceHolder');
-			};
-
-			// Handle mouse move/drag
+            }
+            // Handle mouse move/drag
 			mm = Event.add(d, 'mousemove', function(e) {
 				var x, y, v;
 

@@ -27,4 +27,4 @@ var Orders = {
 
 		$.get(Config.URL + "store/admin_orders/refund/" + id);
 	}
-}
+};

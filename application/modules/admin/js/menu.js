@@ -191,4 +191,4 @@ var Menu = {
 			$("#rank_field").fadeOut(300);
 		}
 	}
-}
+};

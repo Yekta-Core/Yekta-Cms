@@ -79,4 +79,4 @@ var UI = {
 			$("#tooltip").html(data).show();
 		}
 	}
-}
+};

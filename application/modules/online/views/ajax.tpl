@@ -25,7 +25,7 @@
 				})
 			});
 		}
-	}
+	};
 
 	OnlineModule.update();
 </script>

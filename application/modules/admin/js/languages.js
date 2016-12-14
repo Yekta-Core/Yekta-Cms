@@ -21,4 +21,4 @@ var Languages = {
 			}
 		});
 	}
-}
+};

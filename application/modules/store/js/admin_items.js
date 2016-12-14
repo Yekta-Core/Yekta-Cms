@@ -263,6 +263,6 @@ var Items = {
 			break;
 		}
 	}
-}
+};
 
 $(document).ready(Items.groupActions);

@@ -87,4 +87,4 @@ var Character = {
 	 		$("#tab_armory_3").fadeTo(500, 1);
 	 	}
 	 }
-}
+};

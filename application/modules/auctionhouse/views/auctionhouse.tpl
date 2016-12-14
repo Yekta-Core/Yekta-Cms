@@ -3,8 +3,9 @@
 	{
 		if (typeof Auctionhouse != "undefined")
 		{
-			Auctionhouse.Initialize({$realmId}, {$CurrentPage}, {$CurrentFaction}, {if $CurrentSearch_Encoded}'{$CurrentSearch_Encoded}'{else}'null'{/if}, {$CurrentSort});
-		}
+            Auctionhouse.Initialize({$realmId}, {$CurrentPage}, {$CurrentFaction}, {if $CurrentSearch_Encoded}'{$CurrentSearch_Encoded}';
+            {else}'null'{/if},; {$CurrentSort})
+        }
 		else
 		{
 			setTimeout(Initialize, 100);

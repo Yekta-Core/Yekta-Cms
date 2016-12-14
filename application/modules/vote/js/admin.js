@@ -221,4 +221,4 @@ var Topsites = {
 			return format.replace('{vote_link}', url);
 		}
 	}
-}
+};
