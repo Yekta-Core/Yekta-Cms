@@ -1,15 +1,72 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Select language - Yekta-CMS</title>
+		<title>نصب - یکتا سی ام اس</title>
 
         <meta charset="utf-8">
 
 		<link rel="shortcut icon" href="images/favicon.png" />
 		<link rel="stylesheet" href="css/main.css" />
+
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
+		<script src="js/ui.js"></script>
+		<script src="js/ajax.js"></script>
+		<script src="js/memory.js"></script>
+		<script>
+			$(document).ready(function()
+			{
+				UI.initialize();
+				Ajax.initialize();
+				Memory.populate();
+			})
+		</script>
+
+		<!--[if IE]>
+			<style type="text/css">
+			#main .right h2 img {
+				position:relative;
+			}
+			</style>
+		<![endif]-->
+
+		<!--[if LTE IE 7]>
+			<style type="text/css">
+			#main .right .statistics span {
+				width:320px;
+			}
+			</style>
+		<![endif]-->
 	</head>
 
 	<body>
+		<div id="popup_bg"></div>
+
+		<!-- confirm box -->
+		<div id="confirm" class="popup">
+			<h1 class="popup_question" id="confirm_question"></h1>
+
+			<div class="popup_links">
+				<a href="javascript:void(0)" class="popup_button" id="confirm_button"></a>
+				<a href="javascript:void(0)" class="popup_hide" id="confirm_hide" onClick="UI.hidePopup()">
+					انصراف
+				</a>
+				<div style="clear:both;"></div>
+			</div>
+		</div>
+
+		<!-- alert box -->
+		<div id="alert" class="popup">
+			<h1 class="popup_message" id="alert_message"></h1>
+
+			<div class="popup_links">
+				<a href="javascript:void(0)" class="popup_button" id="alert_button">تایید</a>
+				<div style="clear:both;"></div>
+			</div>
+		</div>
+
 		<div id="wrap">
 			<div id="fixer">
 				<!-- Top bar -->
@@ -23,24 +80,286 @@
 				<section id="wrapper">
 					<div id="top_spacer"></div>
 					<div class="center_1020" id="main">
+
+						<!-- Main Left column -->
+						<aside class="left">
+							<nav>
+								<a class="active"><div class="icon dashboard"></div> نصب</a>
+								<section class="sub">
+									<a class="active" id="1"><div class="icon file"></div> توضیحات</a>
+									<a id="2"><div class="icon link"></div> موارد مورد نیاز</a>
+									<a id="3"><div class="icon list"></div> اطلاعات سرور</a>
+									<a id="4"><div class="icon database"></div> دیتابیس</a>
+									<a id="5"><div class="icon database"></div> ریلم ها</a>
+									<a id="6"><div class="icon cursor"></div> پایان نصب</a>
+								</section>
+							</nav>
+
+							<div class="spacer"></div>
+						</aside>
+
 						<!-- Main right column -->
 						<aside class="right">
-							<h1 id="page_title">Select language - انتخاب زبان</h1>
+							<h1 id="page_title">نصب</h1>
+
 							<section class="box big step">
-								<h2>Select your language :</h2>
+								<h2><img src="images/icons/black16x16/ic_empty_document.png"/> توضیحات</h2>
 								<span>
 									<div class="introduction">
-										<h3 style="direction: rtl;text-align: center;">نکته : بعد از اتمام به هیچ وجه فراموش نکنید پوشه Install را حذف کنید .</h3>
-										<h3 style="text-align: center;">Note: After completing any way do not forget to delete the Install folder.</h3>
-										<ul class="select-language">
-											<li class="sub-language">
-												<a href="en" class="en"><img src="images/en.jpg"/></a>
-											</li>
-											<li class="sub-language">
-												<a href="fa" class="ir"><img src="images/ir.jpg"/></a>
-											</li>
-										</ul>
+										<h3 dir="rtl>خوش آمدید</h3>
+									
+										<b dir="rtl" align="right">توسعه دهنده عزیز</b><b dir="rtl" align="right">, ما خوشحالیم که شما سی ام اس یکتا را برای گیم سرور خود انتخاب نمودید.  یکتا سی ام اس کاملا فارسی میباشد و سعی کرده ایم به بهترین نحو برای شما ایرانی های عزیز آماده کنیم. امیدوارم از سی ام اس لذت ببرید</b>
+										<b dir="rtl" align="left"><a  href="http://www.yekta-core.ir" target="_blank" dir="rtl" align="right">سایت پشتیبانی</a></b>
 									</div>
+								</span>
+
+								<div class="installer_navigation">
+									<a class="next nice_button">شروع مراحل نصب</a>
+								</div>
+							</section>
+
+							<section class="box big step" style="display:none;">
+
+								<h2><img src="images/icons/black16x16/ic_empty_document.png"/> موارد مورد نیاز <span style="color:red;display:inline;padding:0px;">(مهم !)</span></h2>
+
+								<span>
+
+									<div class="introduction">
+										<h3>چه چیز هایی برای اجرای این سیستم نیاز هست ؟</h3>
+									    
+                                        <div class="folder-permissions">
+                                            <h4>دسترسی های پوشه</h4>
+    										<div style="font-weight:bold;margin:10px 0px;" id="config_folder">&bull; /application/config/ نیاز به قابل نوشتن</div>
+
+    										<div style="font-weight:bold;margin:10px 0px;" id="modules_folder">&bull; /application/modules/ قابل نوشتن است</div>
+
+    										<div style="font-weight:bold;margin:10px 0px;" id="cache_folder">&bull; /application/cache/</div>
+                                        </div>
+										
+										<div class="php-version">
+											<h4>نسخه PHP</h4>
+											حداقل نسخه PHP مورد نیاز: 5.3 <span class="check-result"></span>
+										</div>
+                                        
+                                        <div class="php-extensions">
+                                            <h4>افزونه های PHP</h4>
+                                            
+                                            <b>افزونه های زیر لازم است :</b><br>
+    										php_mysqli, php_curl, php_openssl, php_soap, php_gd, php_mbstring, php_json
+
+											<span class="check-result" style="display:none"></span>
+                                            <div id="php-extensions-missing" style="display:none;color:red;margin-top:15px">
+                                                <b>ماژول های زیر غیر فعال است :</b>
+                                                <span class="extensions"></span>
+                                            </div>
+                                            
+    										<div class="how_to_box">
+                                                <div class="title">چگونه برنامه های افزودنی PHP را فعال کنم؟</div>
+                                                <div class="content">
+        											به مسیر محل وجود PHP خود بروید و فایل <code>php.ini</code> را پیدا کنید. برای مثال در Wamp در این مسیر <code>C:\wamp\bin\php\php5.3.13</code> است . و در Xampp در مسیر <code>C:\xampp\php</code>  میتوانید فایل را پیدا کنید . برای مثال باز کردن یکی از افزونه های PHP فایل <code>php.ini</code> را با یک ویرایشگر متن و جستجو باز کنید. برای مثال برای فعال کردن openssl به دنبال کلمه openssl بگردید و  <code>;</code> که در مقابل خط وجود دارد را حذف کنید .<br />فایل را ذخیره کنید و برای ثبت تغییرات آپاچی را یک بار خاموش و دوباره اجرا کنید .<br /><br />
+
+        											<img src="images/php.jpg" style="border:1px solid #ccc" />
+                                                </div>
+    										</div>
+                                        </div>
+                                        
+                                        <div class="apache-modules">
+                                            <h4>ماژول های آپاچی</h4>
+                                            
+    										<b>ما توصیه میکنیم یکتا سی ام اس را روی وب سرور آپاچی و یا هاست نصب کنید<br><br>
+                                            ماژول های آپاچی مورد نیاز شما عبارتند از :</b> <br>
+                                            mod_rewrite, mod_headers, mod_expires, mod_deflate
+
+											<span class="check-result" style="display:none"></span>
+                                            <div id="apache-modules-missing" style="display:none;color:#e18f00;margin-top:15px">
+                                                <b>ماژول های زیر غیر فعال است :</b>
+                                                <span class="modules"></span>
+                                            </div>
+    										
+                                            <div class="how_to_box">
+                                                <div class="title">چگونه ماژول های آپاچی را فعال کنم؟</div>
+                                                <div class="content">
+        											به مسیر محل وجود Apache خود بروید و فایل <code>httpd.conf</code> را پیدا کنید. برای مثال در Wamp در این مسیر <code>C:\wamp\bin\apache\apache2.2.22\conf</code> است . و در Xampp در مسیر <code>C:\xampp\apache\conf</code>  میتوانید فایل را پیدا کنید . برای مثال باز کردن یکی از افزونه های Apache فایل <code>httpd.conf</code> را با یک ویرایشگر متن و جستجو باز کنید. برای مثال برای فعال کردن mod_rewrite به دنبال کلمه mod_rewrite بگردید و  <code>#</code> که در مقابل خط وجود دارد را حذف کنید .<br />فایل را ذخیره کنید و برای ثبت تغییرات آپاچی را یک بار خاموش و دوباره اجرا کنید .<br /><br />
+        											<img src="images/apache.jpg" style="border:1px solid #ccc" />
+                                                </div>
+    										</div>
+                                        </div>
+									</div>
+								</span>
+
+								<div class="installer_navigation">
+								<a class="next nice_button">مرحله بعد</a>
+									<a class="prev nice_button">مرحله قبل</a>
+								</div>
+							</section>
+
+							<section class="box big step" style="display:none;">
+								<h2><img src="images/icons/black16x16/ic_list.png"/> اطلاعات سرور</h2>
+
+								<span dir="rtl" align="right">
+										همه گزینه های زیر را بعدا میتوان از پنل ادمین تغییر داد
+								</span>
+
+								<form id="form-general-settings">
+									<label for="title" dir="rtl" align="right">نام وبسایت</label>
+									<input type="text" id="title" placeholder="MyServer" required />
+
+									<label for="server_name" dir="rtl" align="right">نام سرور</label>
+									<input type="text" id="server_name" placeholder="MyServer" required />
+
+									<label for="realmlist" dir="rtl" align="right">ریلم لیست</label>
+									<input type="text" id="realmlist" placeholder="logon.myserver.com" required />
+
+									<label for="security_code" dir="rtl" align="right">رمز عبور برای پنل مدیریت</label>
+									<input type="text" id="security_code" />
+
+									<label for="expansion" dir="rtl" align="right">پچ سرور</label>
+									<select id="expansion" required>
+										<option value="cataclysm">Warlords Of Draenor</option>
+										<option value="cataclysm">Mists Of Pandaria</option>
+										<option value="cataclysm">Cataclysm</option>
+										<option value="wotlk">Wrath of the Lich King</option>
+										<option value="tbc">The Burning Crusade</option>
+										<option value="vanilla">No expansion allowed</option>
+									</select>
+
+									<label for="keywords" dir="rtl" align="right">موتور جستجو:  کلمات کلیدی و با کاما جدا شود.</label>
+									<input type="text" id="keywords" placeholder="world of warcraft,wow,private server,pvp" />
+
+									<label for="description" dir="rtl" align="right">موتور جستجو:  توضیحات</label>
+									<input type="text" id="description" placeholder="Best World of Warcraft private server in the entire world!" />
+
+									<label for="analytics" dir="rtl" align="right"><a href="http://analytics.google.com" target="_blank">Google Analytics</a> website ID for advanced statistics (optional)</label>
+									<input type="text" id="analytics" placeholder="XX-YYYYYYYY-Z" />
+
+									<label for="cdn" dir="rtl" align="right">استفاده از شبکه های تحویل محتوا برای کتابخانه جاوا اسکریپت (برای شبکه های LAN غیرفعال کنید.)</label>
+									<select id="cdn">
+										<option value="1">بله</option>
+										<option value="0">خیر</option>
+									</select>
+								</form>
+								
+								<div class="installer_navigation">
+									<a class="next nice_button">مرحله بعد</a>
+									<a class="prev nice_button">مرحله قبل</a>
+								</div>
+							</section>
+
+							<section class="box big step" data-validation="database" style="display:none;">
+								<h2><img src="images/icons/black16x16/ic_grid.png"/> تنظیمات دیتابیس</h2>
+
+								<form>
+									<h3 dir="rtl" align="right">دیتابیس وبسایت</h3>
+									
+									<label for="cms_hostname" dir="rtl" align="right">محل دیتابیس وبسایت (معمولا localhost)  </label>
+									<input type="text" id="cms_hostname" />
+									
+									<label for="cms_username" dir="rtl" align="right">نام کاربری دیتابیس وبسایت</label>
+									<input type="text" id="cms_username" />
+
+									<label for="cms_password" dir="rtl" align="right">رمز عبور دیتابیس وبسایت</label>
+									<input type="password" id="cms_password" />
+
+									<label for="cms_database" dir="rtl" align="right">نام دیتابیس وبسایت</label>
+									<input type="text" id="cms_database" />
+
+									<label for="cms_port" dir="rtl" align="right">پورت</label>
+									<input type="text" id="cms_port" placeholder="3306" />
+
+									<br />
+									<h3 dir="rtl" align="right">دیتابیس اکانت ها</h3>
+									
+									<label for="realmd_hostname" dir="rtl" align="right">محل دیتابیس Realmd/logon/auth</label>
+									<input type="text" id="realmd_hostname" />
+									
+									<label for="realmd_username" dir="rtl" align="right">نام کاربری دیتابیس Realmd/logon/auth</label>
+									<input type="text" id="realmd_username" />
+
+									<label for="realmd_password" dir="rtl" align="right">رمز عبور دیتابیس Realmd/logon/auth</label>
+									<input type="password" id="realmd_password" />
+
+									<label for="realmd_database" dir="rtl" align="right">نام دیتابیس Realmd/logon/auth</label>
+									<input type="text" id="realmd_database" />
+
+									<label for="realmd_port" dir="rtl" align="right">پورت</label>
+									<input type="text" id="realmd_port" placeholder="3306" />
+								</form>
+								
+								<div class="installer_navigation">
+									<a class="next nice_button">مرحله بعد</a>
+									<a class="prev nice_button">مرحله قبل</a>
+								</div>
+							</section>
+
+							<section class="box big step" data-validation="realms" style="display:none;">
+								<h2><img src="images/icons/black16x16/ic_cloud.png"/> ریلم ها</h2>
+
+								<span dir="rtl" align="right">لطفا در انتخاب نوع شبیه ساز و نوع آن دقت فرمایید.</span>
+
+								<div class="realmAdd">
+									<a onClick="Ajax.Realms.addRealm();" class="nice_button">افزودن ریلم</a>
+								</div>
+
+								<div id="realm_field"></div>
+								
+								<div id="loader" style="display:none;">
+									<form>
+										<label for="emulator" dir="rtl" align="right">شبیه ساز</label>
+										<select id="emulator">
+											<option disabled="disabled">درحال بارگذاری ...</option>
+										</select>
+										
+										<label for="realmName" dir="rtl" align="right">نام ریلم</label>
+										<input type="text" id="realmName" />
+
+										<label for="realmName" dir="rtl" align="right">محل سرور</label>
+										<input type="text" id="hostname" />
+
+										<label for="username" dir="rtl" align="right">نام کاربری دیتابیس سرور</label>
+										<input type="text" id="username" />
+
+										<label for="password" dir="rtl" align="right">رمز عبور دیتابیس سرور</label>
+										<input type="password" id="password" />
+
+										<label for="db_port" dir="rtl" align="right">پورت دیتابیس</label>
+										<input type="text" id="db_port" placeholder="3306" />
+
+										<label for="characters" dir="rtl" align="right">نام دیتابیس Characters</label>
+										<input type="text" id="characters"/>
+
+										<label for="world" dir="rtl" align="right">نام دیتابیس World</label>
+										<input type="text" id="world" />
+
+										<label for="cap" dir="rtl" align="right">حداکثر ظرفیت تعداد پلیر در ریلم</label>
+										<input type="text" id="cap" />
+
+										<label for="port" dir="rtl" align="right">ریلم پورت (معمولا 8085 برای بیس های ترینیتی و منگوس و 8129 برای آرک امو)</label>
+										<input type="text" id="port" />
+
+										<label for="console_port" dir="rtl" align="right">کنسول پورت : برای دسترسی ریموت معمولا 3443 و سرویس Soap معمولا 7878 میباشد</label>
+										<input type="text" id="console_port" />
+
+										<label for="console_username" data-tip="اکانت رنک 4 به بالا در سرور<br />برای ارتباط نیاز است" dir="rtl" align="right">نام کاربری ادمین با رنک 4 (?)</label>
+										<input type="text" id="console_username" />
+
+										<label for="console_password" data-tip="اکانت رنک 4 به بالا در سرور<br />برای ارتباط نیاز است" dir="rtl" align="right">رمز عبور نام کاربری ادمین با رنک 4 (?)</label>
+										<input type="password" id="console_password" />
+										
+									</form>
+								</div>
+
+								<div style="border-top:1px solid #ccc;margin-bottom:5px;"></div>
+								
+								<div class="installer_navigation">
+									<a class="next nice_button">پایان</a>
+									<a class="prev nice_button">مرحله قبل</a>
+								</div>
+							</section>
+
+							<section class="box big step" style="display:none;">
+								<h2><img src="images/icons/black16x16/ic_time.png"/>... درحال نصب</h2>
+								<span id="install" style="padding: 10px 15px">
+
 								</span>
 							</section>
 						</aside>

@@ -32,7 +32,7 @@ class Install
 
 	private function getEmulators()
 	{
-		require_once("../../application/config/emulator_names.php");
+		require_once("../application/config/emulator_names.php");
 
 		die(json_encode($emulators));
 	}
@@ -44,12 +44,12 @@ class Install
         
 		$folder = $_GET['test'];
 
-		$file = fopen("../../application/".$folder."/write_test.txt", "w");
+		$file = fopen("../application/".$folder."/write_test.txt", "w");
 
 		fwrite($file, "success");
 		fclose($file);
 
-		unlink("../../application/".$folder."/write_test.txt");
+		unlink("../application/".$folder."/write_test.txt");
 
 		die("1");
 	}
@@ -107,14 +107,14 @@ class Install
 
 	private function config()
 	{
-		$owner = fopen("../../application/config/owner.php", "w");
+		$owner = fopen("../application/config/owner.php", "w");
 		fwrite($owner, '<?php $config["owner"] = "'.addslashes($_POST['superadmin']).'";');
 		fclose($owner);
 
-		require_once('../../application/libraries/configeditor.php');
+		require_once('../application/libraries/configeditor.php');
 
-		$distConfig = '../../application/config/fusion.php.dist';
-		$config = '../../application/config/fusion.php';
+		$distConfig = '../application/config/fusion.php.dist';
+		$config = '../application/config/fusion.php';
 		if(file_exists($distConfig))
 			copy($distConfig, $config); // preserve the original in-case they mess up the new one
 
@@ -155,28 +155,16 @@ class Install
 		{
 			switch($_POST['expansion'])
 			{
-				case "wod":
-					$config->set('disabled_expansions', array(6));
-				break;
-
-				case "mop":
-					$config->set('disabled_expansions', array(5,6));
-				break;
-
-				case "cata":
-					$config->set('disabled_expansions', array(4,5,6));
-				break;
-
 				case "wotlk":
-					$config->set('disabled_expansions', array(3,4,5,6));
+					$config->set('disabled_expansions', array(3));
 				break;
 
 				case "tbc":
-					$config->set('disabled_expansions', array(2,3,4,5,6));
+					$config->set('disabled_expansions', array(2,3));
 				break;
 
 				case "vanilla":
-					$config->set('disabled_expansions', array(1,2,3,4,5,6));
+					$config->set('disabled_expansions', array(1,2,3));
 				break;
 
 				default:
@@ -187,7 +175,7 @@ class Install
 
 		$config->save();
 
-		$db = fopen("../../application/config/database.php", "w");
+		$db = fopen("../application/config/database.php", "w");
 
 		$raw = '<?php
 $active_group = "cms";
@@ -236,7 +224,7 @@ $db["account"]["stricton"] = FALSE;';
 
 	private function connect()
 	{
-		require('../../application/config/database.php');
+		require('../application/config/database.php');
 
 		$this->db = new mysqli($db['cms']['hostname'], $db['cms']['username'], $db['cms']['password'], $db['cms']['database'], $db['cms']['port']);
 		if(mysqli_connect_error())
@@ -318,7 +306,7 @@ $db["account"]["stricton"] = FALSE;';
 		{
 			foreach($realms as $realm)
 			{
-				$this->db->query("INSERT INTO realms(`emulator`, `cap`, `char_database`, `console_password`, `console_port`, `console_username`, `hostname`, `password`, `realm_port`, `realmName`, `username`, `world_database`, `override_port_world`, `override_port_char`)
+				$this->db->query("INSERT INTO realms(`emulator`, `cap`, `char_database`, `console_password`,	`console_port`,	`console_username`,	`hostname`,	`password`, `realm_port`, `realmName`, `username`, `world_database`, `override_port_world`, `override_port_char`)
 							VALUES('".$this->db->real_escape_string($realm['emulator'])."',
 									'".$this->db->real_escape_string($realm['cap'])."',
 									'".$this->db->real_escape_string($realm['characters'])."',
@@ -371,11 +359,7 @@ $db["account"]["stricton"] = FALSE;';
 	private function finalStep()
 	{
 		$file = fopen('.lock', 'w');
-		$roots = fopen('../.lock', 'w');
-		$fileen = fopen('../en/.lock', 'w');
 		fclose($file);
-		fclose($roots);
-		fclose($fileen);
 		
 		if(file_exists(".lock"))
 		{

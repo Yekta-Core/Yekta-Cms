@@ -35,7 +35,7 @@ var Ajax = {
 
 		addRealm: function(form)
 		{
-			UI.confirm('<input type="text" id="realmname_preserve" placeholder="Enter the realmname" autofocus/>', 'Add', function()
+			UI.confirm('<input type="text" id="realmname_preserve" placeholder="نام ریلم را وارد کنید" autofocus/>', 'افزودن', function()
 			{
 				var name = $("#realmname_preserve").val();
 				
@@ -50,7 +50,7 @@ var Ajax = {
 		
 		deleteRealm: function(img)
 		{
-			UI.confirm('Are you sure?', 'Yes', function() {
+			UI.confirm('آیا مطمئن هستید؟', 'بله', function() {
 				$(img).parents('.realmHeader, .realmHeader + div.realmForm').fadeOut(200, function() {
 					Ajax.Realms.saveAll();
 				});
@@ -94,9 +94,9 @@ var Ajax = {
 		$.get("system.php?step=checkPhpVersion", function(data)
 		{
 			if (data == '1')
-				$('.php-version .check-result').css('color', 'green').html('OK!');
+				$('.php-version .check-result').css('color', 'green').html('تایید');
 			else
-				$('.php-version .check-result').addClass('error').css('color','red').html('Not installed.');
+				$('.php-version .check-result').addClass('error').css('color','red').html('نصب نشده');
             
 			if (onComplete !== undefined)
 				onComplete(data == '1');
@@ -129,11 +129,11 @@ var Ajax = {
 		{
 			if(data == '1')
 			{
-				$("#config_folder").css({color:"green"}).removeClass('error').html("../application/config/ is writable");
+				$("#config_folder").css({color:"green"}).removeClass('error').html("/application/config/ is writable");
 			}
 			else
 			{
-				$("#config_folder").css({color:"red"}).addClass('error').html('../application/config/ needs to be writable (see <a href="http://en.wikipedia.org/wiki/Chmod" target="_blank">chmod</a>)');
+				$("#config_folder").css({color:"red"}).addClass('error').html('/application/config/ needs to be writable (see <a href="http://en.wikipedia.org/wiki/Chmod" target="_blank">chmod</a>)');
 			}
             
             done++;
@@ -143,11 +143,11 @@ var Ajax = {
 		{
 			if(data == '1')
 			{
-				$("#cache_folder").css({color:"green"}).removeClass('error').html("../application/cache/ is writable");
+				$("#cache_folder").css({color:"green"}).removeClass('error').html("/application/cache/ is writable");
 			}
 			else
 			{
-				$("#cache_folder").css({color:"red"}).addClass('error').html('../application/cache/ needs to be writable (see <a href="http://en.wikipedia.org/wiki/Chmod" target="_blank">chmod</a>)');
+				$("#cache_folder").css({color:"red"}).addClass('error').html('/application/cache/ needs to be writable (see <a href="http://en.wikipedia.org/wiki/Chmod" target="_blank">chmod</a>)');
 			}
             
             done++;
@@ -157,11 +157,11 @@ var Ajax = {
 		{
 			if(data == '1')
 			{
-				$("#modules_folder").css({color:"green"}).removeClass('error').html("../application/modules/ is writable");
+				$("#modules_folder").css({color:"green"}).removeClass('error').html("/application/modules/ is writable");
 			}
 			else
 			{
-				$("#modules_folder").css({color:"red"}).addClass('error').html('../application/modules/ needs to be writable (see <a href="http://en.wikipedia.org/wiki/Chmod" target="_blank">chmod</a>)');
+				$("#modules_folder").css({color:"red"}).addClass('error').html('/application/modules/ needs to be writable (see <a href="http://en.wikipedia.org/wiki/Chmod" target="_blank">chmod</a>)');
 			}
             
             done++;
@@ -177,7 +177,7 @@ var Ajax = {
             }
             else {
                 $('#php-extensions-missing').hide();
-				$('.php-extensions .check-result').css('color', 'green').html('OK!').show();
+				$('.php-extensions .check-result').css('color', 'green').html('تایید').show();
             }
 			
             if (onComplete !== undefined)
@@ -194,7 +194,7 @@ var Ajax = {
             }
             else {
                 $('#apache-modules-missing').hide();
-				$('.apache-modules .check-result').css('color', 'green').html('OK!').show();
+				$('.apache-modules .check-result').css('color', 'green').html('تایید').show();
             }
             
             if (onComplete !== undefined)
@@ -220,16 +220,16 @@ var Ajax = {
 							{
 								if(data != "success")
 								{
-									UI.alert('Please delete or rename the "install" folder and then visit <a href="../../">your site</a> again.');
+									UI.alert('لطفا پوشه نصب را حذف کنید و صفحه را دوباره بارگذاری کنید');
 								}
 								else
 								{
-									UI.alert('Installation successful', 500);
+									UI.alert('با موفقیت نصب شد', 500);
 
 									setTimeout(function()
 									{
 										Memory.clear();
-										window.location = "../../";
+										window.location = "../";
 									}, 500);
 								}
 							});
@@ -241,12 +241,12 @@ var Ajax = {
 
 		complete: function()
 		{
-			$("#install").append("<div style='color:green;display:inline;'>done</div><br />");
+			$("#install").append("<div style='color:green;display:inline;'> پایان </div><br />");
 		},
 
 		configs: function(name, callback)
 		{
-			$("#install").append("Writing configs...");
+			$("#install").append("در حال نوشتن تنظیمات");
 
 			var data = {
 				title: $("#title").val(),
@@ -277,7 +277,7 @@ var Ajax = {
 			{
 				if(res != '1')
 				{
-					UI.alert("Something went wrong: " + res);
+					UI.alert("خطایی رخ داده: " + res);
 				}
 				else
 				{
@@ -289,13 +289,13 @@ var Ajax = {
 
 		database: function(callback)
 		{
-			$("#install").append("Importing database...");
+			$("#install").append("در حال وارد کردن پایگاه داده");
 
 			$.post("system.php?step=database", function(res)
 			{
 				if(res != '1')
 				{
-					UI.alert("Something went wrong: " + res);
+					UI.alert("خطایی رخ داده: " + res);
 				}
 				else
 				{
@@ -307,7 +307,7 @@ var Ajax = {
 
 		realms: function(callback)
 		{
-			$("#install").append("Creating realms...");
+			$("#install").append("در حال ساخت ریلم ها");
 
 			var data = {
 				realms: JSON.stringify(Ajax.Realms.data),
@@ -318,7 +318,7 @@ var Ajax = {
 			{
 				if(res != '1')
 				{
-					UI.alert("Something went wrong: " + res);
+					UI.alert("خطایی رخ داده: " + res);
 				}
 				else
 				{
@@ -330,7 +330,7 @@ var Ajax = {
 
 		ranks: function(callback)
 		{
-			$("#install").append("Creating ranks...");
+			$("#install").append("در حال ساخت رنک ها");
 
 			var data = {
 				emulator: $("#emulator").val()
@@ -340,7 +340,7 @@ var Ajax = {
 			{
 				if(res != '1')
 				{
-					UI.alert("Something went wrong: " + res);
+					UI.alert("خطایی رخ داده: " + res);
 				}
 				else
 				{

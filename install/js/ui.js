@@ -38,7 +38,7 @@ var UI = {
         $('.installer_navigation:visible').fadeOut(100, function() {
             $(this).find('a').hide();
             
-			$(this).append('<img src="../images/ajax.gif" />').fadeIn(100, function()
+			$(this).append('<img src="images/ajax.gif" />').fadeIn(100, function()
             {
                 if (onComplete !== undefined)
                     onComplete();
